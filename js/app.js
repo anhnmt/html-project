@@ -32,18 +32,15 @@ $(document).ready(function() {
     });
 
     /*---Hero Slider---*/
-    var heroSlider = $('#section-1528354139490 .hero-slider');
-    heroSlider.slick({
-        arrows: true,
-        autoplay: false,
-        autoplaySpeed: 5000,
+    $('.hero-slider').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 10000,
         dots: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         fade: true,
         infinite: true,
         slidesToShow: 1,
-        prevArrow: '<button type="button" class="slick-prev"><i class="icofont icofont-long-arrow-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="icofont icofont-long-arrow-right"></i></button>',
     });
 });
