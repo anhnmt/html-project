@@ -2,12 +2,16 @@ $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
 
     /*---stickey menu---*/
+    var navbarSticky = $(".header-bottom");
+    var stickyTop = navbarSticky.offset().top;
+
     $(window).on('scroll',function() {
-        var scroll = $(window).scrollTop();
-        if (scroll < 100) {
-            $(".header-bottom").removeClass("fixed-top");
+        var windowTop = $(window).scrollTop();
+
+        if (stickyTop < windowTop) {
+            navbarSticky.addClass("fixed-top");
         } else {
-            $(".header-bottom").addClass("fixed-top");
+            navbarSticky.removeClass("fixed-top");
         }
     });
 });

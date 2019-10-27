@@ -21,11 +21,16 @@ a,
 button,
 img,
 input,
-span,
-div {
+span {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+}
+
+div {
+    -webkit-transition: all 0.1s ease 0s;
+    -o-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
 }
 
 a,
@@ -73,6 +78,12 @@ button:focus {
     color: #16181b;
     text-decoration: none;
     background: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .fixed-top {
+        position: relative;
+    }
 }
 
 /*
@@ -217,6 +228,49 @@ button:focus {
     text-transform: uppercase;
     font-size: 14px;
 }
+
+/* main-shipping */
+.main-shipping .row {
+    border: 1px solid #f0f0f0;
+    padding: 15px 5px;
+    border-radius: 4px;
+}
+
+.shipping-item {
+    padding: 20px 0;
+    border-left: 1px solid #f0f0f0;
+}
+
+.shipping-item:first-child {
+    border: 0;
+}
+
+@media (max-width: 992px) {
+    .shipping-item {
+        border: 0;
+        margin-bottom: 12px;
+    }
+}
+
+.shipping-icon {
+    margin-right: 10px;
+}
+
+.shipping-content h2 {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.shipping-content p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+}
+
 
 body {
     height: 1500px;
