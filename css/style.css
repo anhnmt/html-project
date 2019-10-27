@@ -1,6 +1,7 @@
 /*
     CUSTOM CSS
 */
+
 * {
     padding: 0;
     margin: 0;
@@ -75,7 +76,7 @@ body.block {
     -webkit-box-shadow: none;
 }
 
-.dropdown > .dropdown-toggle:active {
+.dropdown>.dropdown-toggle:active {
     pointer-events: none;
 }
 
@@ -100,11 +101,14 @@ body.block {
     }
 }
 
+
 /*
     HEADER STYLE
 */
 
+
 /* header-middle */
+
 .header-middle {
     background: #ffd54c;
 }
@@ -169,7 +173,9 @@ body.block {
     }
 }
 
+
 /* header-bottom */
+
 .header-bottom {
     -webkit-box-shadow: inherit;
     box-shadow: inherit;
@@ -180,7 +186,7 @@ body.block {
 
 .dropdown-menu li:hover a,
 .nav-link.active,
-.navbar-nav > li:hover > a {
+.navbar-nav>li:hover>a {
     color: #ffd54c;
 }
 
@@ -244,6 +250,12 @@ body.block {
 }
 
 @media (max-width: 767.98px) {
+    .dropdown .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: perspective(600px) rotateX(0deg);
+        transform: perspective(600px) rotateX(0deg);
+    }
     .navbar-collapse {
         position: fixed;
         left: -100%;
@@ -259,21 +271,22 @@ body.block {
         transition: all .3s ease-in-out, -webkit-transform .3s ease-in-out;
         z-index: 999;
     }
-
     .navbar-collapse:not(.show) {
         display: block;
     }
-
     .navbar-collapse.show {
         left: 0;
     }
 }
 
+
 /*
     MAIN STYLE
 */
 
+
 /* main-shipping */
+
 .main-shipping .row {
     border: 1px solid #f0f0f0;
     padding: 15px 5px;
