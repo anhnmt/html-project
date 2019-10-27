@@ -18,12 +18,16 @@ $(document).ready(function() {
         }
     });
 
-    /*---Sự kiện click ra ngoài---*/
-    $(document).click(function (e) {
-        var target = $(e.target);
-        /*---offcanvas menu---*/
-        if(!target.is('.collapse') && $('.collapse').hasClass('show') === true) {
-            $('.collapse').collapse('toggle');
-        }
+    /*---offcanvas menu---*/
+    $('.navbar-toggler').on('click', function() {
+        $('body').addClass('block');
+        $('#header-navbar').addClass('show');
+        $('.overlay').show();
+    });
+
+    $('.overlay').on('click', function() {
+        $('body').removeClass('block');
+        $('#header-navbar').removeClass('show');
+        $('.overlay').hide();
     });
 });

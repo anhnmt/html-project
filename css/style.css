@@ -55,6 +55,23 @@ button:focus {
     outline: none;
 }
 
+body.block {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 990;
+}
+
 .form-control:focus {
     box-shadow: none;
     -moz-box-shadow: none;
@@ -238,7 +255,7 @@ button:focus {
         padding-right: 1rem;
         padding-left: 1rem;
         overflow-y: auto;
-        background-color: var(--gray-dark);
+        background-color: #bebebe;
         transition: -webkit-transform .3s ease-in-out;
         transition: transform .3s ease-in-out;
         transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
@@ -247,7 +264,7 @@ button:focus {
         z-index: 999;
     }
 
-    .collapse:not(.show) {
+    .navbar-collapse:not(.show) {
         display: block;
     }
 
