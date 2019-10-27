@@ -27,136 +27,143 @@
     <!-- Header -->
     <header class="header">
         <div class="header-top">
+
+        </div>
+
+        <div class="header-middle py-3 py-md-4">
             <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col mt-2 mb-2">
-                        <div class="header-links">
-                            <a href="javascript:void(0);">
-                                <i class="fal fa-shipping-fast"></i><span>Kiểm tra đơn hàng</span>
-                            </a>
-                            <a href="javascript:void(0);">
-                                <i class="fal fa-user-headset"></i><span>Chăm sóc khách hàng</span>
-                            </a>
+                <div class="row align-items-center">
+                    <div class="middle-left col-md-3 mb-2 mb-md-0">
+                        <div class="header-logo d-flex justify-content-center justify-content-md-start">
+                            <a href="/"><img src="images/logo.png" alt=""></a>
                         </div>
                     </div>
 
-                    <div class="col order-12 order-xs-12 order-lg-2 mt-2 mb-2">
-                        <div class="header-search">
-                            <form action="/search" method="get" role="search" class="form-inline">
-                                <div class="form-row align-items-center">
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <input name="q" value="" type="text" class="form-control"
-                                                placeholder="Tìm kiếm trên E&E">
-                                            <div class="input-group-prepend">
-                                                <button type="submit"><i class="far fa-search"></i></button>
+                    <div class="middle-right col-md-9 mt-3 mt-md-0">
+                        <div class="row align-items-center">
+                            <div class="header-search col-md-7 d-none d-md-block">
+                                <div class="row d-flex justify-content-end">
+                                    <div class="col-9">
+                                        <form action="#">
+                                            <div class="input-group search-box">
+                                                <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Tìm gì đó ở đây .." aria-label="Search" name="q">
+                                                <div class="input-group-append">
+                                                    <button type="submit"><i class="far fa-search"></i></button>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
+                            </div>
 
-                    <div class="col order-2 order-xs-2 order-lg-12 mt-2 mb-2">
-                        <div class="header-account">
-                            <a href="/account"><i class="far fa-user"></i><span>Đăng nhập</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <div class="header-shop col-md-5">
+                                <div class="row d-flex justify-content-around justify-content-md-end">
+                                    <div class="header-menu d-md-none col-auto">
+                                        <a href="javascript:void(0);" class="navbar-toggler" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                                            <i class="far fa-bars"></i>
+                                        </a>
+                                    </div>
 
-        <div class="header-bottom header-sticky">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col mt-3 mb-3">
-                        <div class="header-logo">
-                            <a href="/">
-                                <img src="images/logo_compact.webp" alt="E&amp;E - Electronics Shopify Theme">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col d-none d-lg-block">
-                        <!-- Main Menu Start -->
-                        <div class="main-menu">
-                            <nav class="navbar navbar-expand-sm">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <!-- Links -->
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="#">Trang chủ</a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Trang</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="dropdown-item">
-                                                    <a href="#">Link 1</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="#">Link 2</a>
-                                                </li>
-                                                <li class="dropdown-item">
-                                                    <a href="#">Link 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Sản phẩm</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Tin tức</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);">Liên Hệ</a>
-                                        </li>
-                                    </ul>
+                                    <div class="header-wishlist col-auto">
+                                        <a href="wishlist.html" data-toggle="tooltip" title="Danh sách yêu thích">
+                                            <i class="far fa-heart"></i>
+                                            <span class="wishlist-quantity badge badge-pill badge-warning">10</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="header-cart col-auto" data-toggle="tooltip" title="Giỏ hàng">
+                                        <a href="javascript:void(0);">
+                                            <i class="far fa-shopping-cart"></i>
+                                            <span class="cart-quantity badge badge-pill badge-warning">0</span>
+                                        </a>
+                                    </div>
                                 </div>
-
-                            </nav>
-                        </div><!-- Main Menu End -->
-                    </div>
-
-                    <div class="col order-2 order-lg-12 order-xl-12">
-                        <div class="header-shop">
-                            <a href="/account/login" class="header-wishlist" data-toggle="tooltip"
-                                title="Danh sách yêu thích"><i class="fal fa-heart"></i></a>
-                            <!-- Cart -->
-                            <a href="javascript:void(0);" class="header-cart" data-toggle="tooltip"
-                                title="Giỏ hàng">
-                                <i class="fal fa-shopping-cart"></i> <span class="number bigcounter">0</span>
-                            </a>
+                            </div>
                         </div>
-
                     </div>
-
-                    <!-- Mobile Menu -->
-                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
                 </div>
             </div>
         </div>
 
-        <div class="header-cagetory">
+        <div class="header-bottom">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="category-toggle-wrap d-block d-lg-none">
-                            <button class="category-toggle">Categories<i class="ti-menu"></i></button>
-                        </div>
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="header-menu row">
+                            <div class="main-menu">
+                                <nav class="navbar navbar-expand-md p-0">
+                                    <div class="collapse navbar-collapse" id="navbarText">
+                                        <ul class="navbar-nav mr-auto navbar-expand-md">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="index.html">Home</a>
+                                            </li>
 
-                        <nav class="category-menu" style="">
-                            <ul>
-                                <li><a href="/collections/all">Tv &amp; Audio System</a></li>
-                                <li><a href="/collections/bestseller">Computer &amp; Laptop</a></li>
-                                <li><a href="/collections/camera-printer">Phones &amp; Tablets</a></li>
-                                <li><a href="/collections/deal">Home Appliances</a></li>
-                                <li><a href="/collections/drone">Kitchen appliances</a></li>
-                                <li><a href="/collections/laptop">Accessories</a></li>
-                            </ul>
-                        </nav>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">Shop</a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Action</a>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Another action</a>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Something else here</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">Blog</a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Action</a>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Another action</a>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Something else here</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="javascript:void(0)">Pages</a>
+
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Action</a>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Another action</a>
+                                                    </li>
+
+                                                    <li class="dropdown-item">
+                                                        <a href="#">Something else here</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">About us</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Contact us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,78 +172,7 @@
 
     <!-- Main -->
     <main class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <section class="cd-hero js-cd-hero js-cd-autoplay">
-                            <ul class="cd-hero__slider">
-                                <li class="cd-hero__slide cd-hero__slide--selected js-cd-slide">
-                                    <div class="cd-hero__content cd-hero__content--full-width">
-                                        <h2>Hero slider</h2>
-                                        <p>A simple, responsive slideshow in CSS &amp; JavaScript.</p>
-                                        <a href="http://codyhouse.co/gem/hero-slider/" class="cd-hero__btn">Article &amp; Download</a>
-                                    </div>
-                                </li>
 
-                                <li class="cd-hero__slide js-cd-slide">
-                                    <div class="cd-hero__content cd-hero__content--half-width">
-                                        <h2>Slide title here</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
-                                        <a href="#0" class="cd-hero__btn">Start</a>
-                                        <a href="#0" class="cd-hero__btn cd-hero__btn--secondary">Learn More</a>
-                                    </div> 
-                                    <div class="cd-hero__content cd-hero__content--half-width cd-hero__content--img">
-                                        <img src="https://codyhouse.co/demo/hero-slider/assets/tech-1.jpg" alt="tech 1">
-                                    </div> 
-                                </li>
-                                <li class="cd-hero__slide js-cd-slide">
-                                    <div class="cd-hero__content cd-hero__content--half-width cd-hero__content--img">
-                                        <img src="https://codyhouse.co/demo/hero-slider/assets/tech-2.jpg" alt="tech 2">
-                                    </div> 
-                                    <div class="cd-hero__content cd-hero__content--half-width">
-                                        <h2>Slide title here</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
-                                        <a href="#0" class="cd-hero__btn">Start</a>
-                                        <a href="#0" class="cd-hero__btn cd-hero__btn--secondary">Learn More</a>
-                                    </div> 
-                                </li>
-                                <li class="cd-hero__slide cd-hero__slide--video js-cd-slide">
-                                    <div class="cd-hero__content cd-hero__content--full-width">
-                                        <h2>Slide title here</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
-                                        <a href="#0" class="cd-hero__btn">Learn more</a>
-                                    </div>
-                                    <div class="cd-hero__content cd-hero__content--bg-video js-cd-bg-video" data-video="https://codyhouse.co/demo/hero-slider/assets/video/video">
-                                    </div>
-                                </li>
-                                <li class="cd-hero__slide js-cd-slide">
-                                    <div class="cd-hero__content cd-hero__content--full-width">
-                                        <h2>Slide title here</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
-                                        <a href="#0" class="cd-hero__btn">Start</a>
-                                        <a href="#0" class="cd-hero__btn cd-hero__btn--secondary">Learn More</a>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div class="cd-hero__nav js-cd-nav">
-                                <nav>
-                                    <span class="cd-hero__marker cd-hero__marker--item-1 js-cd-marker"></span>
-                                    <ul>
-                                        <li class="cd-selected"><a href="#0">Intro</a></li>
-                                        <li><a href="#0">Tech 1</a></li>
-                                        <li><a href="#0">Tech 2</a></li>
-                                        <li><a href="#0">Video</a></li>
-                                        <li><a href="#0">Image</a></li>
-                                    </ul>
-                                </nav>
-                            </div> 
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <!-- Footer -->
@@ -249,7 +185,7 @@
     <!-- Local bootstrap JS -->
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- App js -->
-    <script src="js/hero-slider.js"></script>
+    <!-- <script src="js/hero-slider.js"></script> -->
     <script src="js/app.js"></script>
 </body>
 
