@@ -157,6 +157,12 @@ button:focus {
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .nav-link {
+        font-size: 14px;
+    }
+}
+
 .dropdown-menu {
     display: block;
     position: absolute;
