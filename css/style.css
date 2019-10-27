@@ -251,18 +251,17 @@ body.block {
 @media (max-width: 767.98px) {
     .navbar-collapse {
         position: fixed;
+        left: -100%;
         top: 0;
         bottom: 0;
         width: 80%;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        overflow-y: auto;
+        /* padding-right: 1rem;
+        padding-left: 1rem; */
         background-color: #bebebe;
+        overflow: scroll;
         transition: -webkit-transform .3s ease-in-out;
-        transition: transform .3s ease-in-out;
-        transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
+        transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out, -webkit-transform .3s ease-in-out;
         z-index: 999;
     }
 
@@ -271,8 +270,7 @@ body.block {
     }
 
     .navbar-collapse.show {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        left: 0;
     }
 }
 
