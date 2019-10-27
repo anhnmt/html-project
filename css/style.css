@@ -7,10 +7,14 @@
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    height: 100%;
+html,
+body {
     font-family: "Open Sans", sans-serif;
+}
+
+img,
+video {
+    max-width: 100%;
 }
 
 a,
@@ -80,6 +84,12 @@ button:focus {
     background: #ffd54c;
 }
 
+@media only screen and (max-width: 767px) {
+    .header-logo a img {
+        max-width: 135px;
+    }
+}
+
 .header-search {
     text-align: center;
 }
@@ -130,10 +140,11 @@ button:focus {
 
 @media (max-width: 575.98px) {
     .header-shop i {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
+/* header-bottom */
 .header-bottom {
     -webkit-box-shadow: inherit;
     box-shadow: inherit;
@@ -194,7 +205,6 @@ button:focus {
     -webkit-transform: perspective(600px) rotateX(0deg);
     transform: perspective(600px) rotateX(0deg);
 }
-
 
 .dropdown-item {
     padding: 0;
