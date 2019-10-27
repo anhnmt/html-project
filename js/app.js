@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    'use strict'
+
+    /*---tooltip---*/
     $('[data-toggle="tooltip"]').tooltip();
 
     /*---stickey menu---*/
@@ -12,6 +15,15 @@ $(document).ready(function() {
             navbarSticky.addClass("fixed-top");
         } else {
             navbarSticky.removeClass("fixed-top");
+        }
+    });
+
+    /*---Sự kiện click ra ngoài---*/
+    $(document).click(function (e) {
+        var target = $(e.target);
+        /*---offcanvas menu---*/
+        if(!target.is('.collapse') && $('.collapse').hasClass('show') === true) {
+            $('.collapse').collapse('toggle');
         }
     });
 });

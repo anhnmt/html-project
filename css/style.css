@@ -149,7 +149,7 @@ button:focus {
     font-size: 32px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
     .header-shop i {
         font-size: 22px;
     }
@@ -229,6 +229,38 @@ button:focus {
     font-size: 14px;
 }
 
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 80%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        background-color: var(--gray-dark);
+        transition: -webkit-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+        transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        z-index: 999;
+    }
+
+    .collapse:not(.show) {
+        display: block;
+    }
+
+    .navbar-collapse.show {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/*
+    MAIN STYLE
+*/
+
 /* main-shipping */
 .main-shipping .row {
     border: 1px solid #f0f0f0;
@@ -271,7 +303,6 @@ button:focus {
     margin-bottom: 0;
 }
 
-
-body {
+.main {
     height: 1500px;
 }
