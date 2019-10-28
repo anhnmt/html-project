@@ -467,6 +467,7 @@ body.block {
 
 .item-product .item-image {
     position: relative;
+    padding: 1.5rem!important;
 }
 
 .item-product .item-image img {
@@ -560,27 +561,6 @@ body.block {
     color: #000;
     position: relative;
     background: #fff;
-}
-
-.item-product .item-image .item-wishlist a::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-bottom: 8px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    font-size: 10px;
-    font-weight: 600;
-    background-color: #444444;
-    color: #ffffff;
-    line-height: 16px;
-    padding: 3px 10px;
-    border-radius: 2px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
 }
 
 .item-product .item-image .item-wishlist a::after {
