@@ -330,3 +330,15 @@ body.block {
 .main {
     height: 1500px;
 }
+
+/*--.main-slider */
+.sp-buttons {
+    position: absolute;
+    bottom: 3%;
+}
+
+.sp-button {
+    border-color: #fff;
+    width: 15px;
+    height: 15px;
+}

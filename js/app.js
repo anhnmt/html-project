@@ -31,16 +31,16 @@ $(document).ready(function() {
         $('.overlay').hide();
     });
 
-    /*---Hero Slider---*/
-    $('.hero-slider').slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 10000,
-        dots: true,
-        pauseOnFocus: false,
-        pauseOnHover: false,
+    /*---Slider Pro---*/
+    $('.slider-pro').sliderPro({
+        width: "100%",
+        height: "80vh",
+        arrows: true,
         fade: true,
-        infinite: true,
-        slidesToShow: 1,
+        autoplay: true,
+        buttons: true,
+        autoScaleLayers: false,
+        responsive: true,
+        thumbnailTouchSwipe: true
     });
 });
