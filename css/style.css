@@ -608,7 +608,7 @@ body.block {
     left: 0;
 }
 
-.ee-product .image .wishlist-compare a:hover {
+.item-product .item-image .item-wishlist a:hover {
     color: #202020;
     border-color: #202020;
 }
