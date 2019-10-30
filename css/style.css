@@ -352,22 +352,6 @@ body.block {
     overflow: hidden;
 }
 
-.main-products-title::before {
-    font-size: 46px;
-    color: #cccccc;
-    line-height: 46px;
-    font-family: "Oswald", sans-serif;
-    content: attr(data-title);
-    font-weight: 700;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    padding-left: 25px;
-    background-color: #ffffff;
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-products-title::before {
         font-size: 40px;
@@ -418,6 +402,7 @@ body.block {
     float: left;
     position: relative;
     z-index: 3;
+    text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -668,7 +653,7 @@ ul.link-widget li a {
     width: 40px;
     height: 40px;
     background-color: #f5d730;
-    border: 3px solid #eeeeee;
+    border: 2px solid #eeeeee;
     color: #202020;
     right: 20px;
     bottom: 20px;
