@@ -342,11 +342,6 @@ body.block {
     margin-bottom: 0;
 }
 
-.main {
-    height: 1500px;
-}
-
-
 /*--.main-slider */
 
 
@@ -417,7 +412,7 @@ body.block {
     font-weight: 700;
     line-height: 30px;
     background-color: #ffffff;
-    padding: 10px 25px;
+    padding: 10px 20px;
     margin: 0;
     margin-left: 40px;
     float: left;
@@ -611,4 +606,86 @@ body.block {
 .item-product .item-image .item-wishlist a:hover {
     color: #202020;
     border-color: #202020;
+}
+
+/* Footer Top */
+.footer {
+    background: #fefcef no-repeat scroll center center / cover;
+}
+
+.footer-bottom {
+    border-top: 1px solid #eae9e9;
+}
+
+p.contact-info {
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 13px;
+}
+
+p.contact-info span {
+    display: block;
+    font-weight: 600;
+    color: #202020;
+}
+
+.footer-widget p {
+    color: #444444;
+    max-width: 430px;
+    font-size: 14px;
+    line-height: 24px;
+    margin: auto;
+}
+
+.footer-widget .widget-title {
+    color: #202020;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+}
+
+ul.link-widget li {
+    margin-bottom: 11px;
+}
+
+ul.link-widget li a {
+    color: #202020;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+
+/* scrollUp */
+#scrollUp {
+    width: 40px;
+    height: 40px;
+    background-color: #f5d730;
+    border: 3px solid #eeeeee;
+    color: #202020;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50px;
+    z-index: 9811 !important;
+    left: auto;
+}
+
+#scrollUp:hover i {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+#scrollUp i {
+    display: block;
+    line-height: 34px;
+    font-size: 22px;
 }

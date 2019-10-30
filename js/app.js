@@ -7,7 +7,8 @@ $(document).ready(function() {
     /*---Stickey Menu---*/
     var navbarSticky = $(".header-bottom");
     var stickyTop = navbarSticky.offset().top;
-
+    
+    /*---Scroll JS---*/
     $(window).on('scroll', function() {
         var windowTop = $(window).scrollTop();
 
@@ -16,6 +17,14 @@ $(document).ready(function() {
         } else {
             navbarSticky.removeClass("fixed-top");
         }
+    });
+
+    /*---Scroll Up---*/
+    $.scrollUp({
+        easingType: 'linear',
+        scrollSpeed: 900,
+        animation: 'fade',
+        scrollText: '<i class="fas fa-arrow-up"></i>',
     });
 
     /*---Offcanvas Menu---*/
