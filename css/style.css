@@ -646,6 +646,10 @@ p.contact-info span {
     text-transform: uppercase;
 }
 
+.footer-copyright p {
+    color: #444444;
+}
+
 ul.link-widget li {
     margin-bottom: 11px;
 }
