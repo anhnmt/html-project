@@ -648,6 +648,8 @@ p.contact-info span {
 
 .footer-copyright p {
     color: #444444;
+    font-size: 14px;
+    line-height: 30px;
 }
 
 ul.link-widget li {
