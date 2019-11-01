@@ -1,0 +1,130 @@
+.breadcrumb_content {
+    padding: 22px 0;
+}
+
+.breadcrumb_content ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 3px;
+    padding-right: 13px;
+    position: relative;
+}
+
+.breadcrumb_content ul li:last-child {
+    margin-right: 0;
+}
+
+.breadcrumb_content ul li:not(:last-child)::before {
+    position: absolute;
+    content: "/";
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+.breadcrumb_content ul li a {
+    color: #999;
+}
+
+
+
+
+.product-detail h1 {
+    text-transform: capitalize;
+    line-height: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.product-detail .product-desc {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.product-detail .price-box span {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.product-detail .price-box .old {
+    font-size: 100%;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.product-variant.quantity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.product-variant.color label,
+.product-variant.quantity label {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.product-variant.quantity input {
+    width: 130px;
+    border: 1px solid #ebebeb;
+    background: none;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.product-variant.color select {
+    border: 1px solid #ebebeb;
+    background: none;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.product-variant.quantity button {
+    border: 0;
+    font-size: 16px;
+    margin-left: 20px;
+    background: #ffd54c;
+    height: 42px;
+    text-transform: capitalize;
+    width: 100%;
+}
+
+.product-action ul li a {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.product-info .col-12 {
+    background-color: #fff;
+}
+
+.product-content p {
+    line-height: 28px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: unset;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+
+}

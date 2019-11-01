@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
     <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:200,300,400,500,600,700">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:200,300,400,500,600,700">
 
     <!--=== Bootstrap CSS ===-->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +25,8 @@
     <link href="css/slick-slider/hero-slider.css" rel="stylesheet">
     <!--=== Style CSS ===-->
     <link href="css/style.css" rel="stylesheet">
+    <!--=== Custom CSS ===-->
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,12 +36,14 @@
 
         </div>
 
-        <div class="header-middle py-3 py-md-4">
+        <div class="header-middle py-3">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="middle-left col-md-3 my-2 mb-md-0">
                         <div class="header-logo d-flex justify-content-center justify-content-md-start">
-                            <a href="index.html"><img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/logo.png" alt=""></a>
+                            <a href="index.html"><img class="lazy"
+                                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                    data-src="images/logo.png" alt=""></a>
                         </div>
                     </div>
 
@@ -49,7 +54,8 @@
                                     <div class="col-9">
                                         <form action="#">
                                             <div class="input-group search-box">
-                                                <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Tìm gì đó ở đây .." aria-label="Search" name="q">
+                                                <input class="form-control my-0 py-1 amber-border" type="text"
+                                                    placeholder="Tìm gì đó ở đây .." aria-label="Search" name="q">
                                                 <div class="input-group-append">
                                                     <button type="submit"><i class="far fa-search"></i></button>
                                                 </div>
@@ -102,7 +108,8 @@
                                             </li>
 
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="javascript:void(0)">Shop</a>
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                                    data-hover="dropdown" href="javascript:void(0)">Shop</a>
 
                                                 <ul class="dropdown-menu">
                                                     <li class="dropdown-item">
@@ -120,7 +127,8 @@
                                             </li>
 
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="javascript:void(0)">Blog</a>
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                                    data-hover="dropdown" href="javascript:void(0)">Blog</a>
 
                                                 <ul class="dropdown-menu">
                                                     <li class="dropdown-item">
@@ -138,7 +146,9 @@
                                             </li>
 
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Pages</a>
+                                                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                                                    data-hover="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                    href="javascript:void(0)">Pages</a>
 
                                                 <ul class="dropdown-menu">
                                                     <li class="dropdown-item">
@@ -192,6 +202,99 @@
             </div>
         </div>
 
+        <div class="product-details my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product-image">
+                            <div class="zoom-image p-4">
+                                <img id="zoom1" src="images/products/smartphone/iphone-11-pro-max-256gb-black-400x400.jpg" alt="big-1">
+                            </div>
+
+                            <div class="list-images">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="product-detail">
+                            <form action="#">
+                                <h1>iPhone 11 Pro Max 256GB</h1>
+
+                                <div class="price-box mb-2">
+                                    <span class="new">37.990.000đ</span>
+                                    <span class="old">39.990.000đ</span>
+
+                                </div>
+
+                                <div class="product-desc pb-2 mb-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat, eligendi veritatis nemo ipsa quod quae sequi enim, doloribus quia hic aliquam magnam, odio tenetur quis animi amet fugiat? Earum.</p>
+                                </div>
+
+                                <div class="product-variant color mb-2">
+                                    <h3>Available Options</h3>
+                                    <label>color</label>
+                                    <select name="color" id="color">
+                                        <option value="">Select color</option>
+                                        <option value="Gray">Gray</option>
+                                        <option value="White">White</option>
+                                        <option value="Black">Black</option>
+                                    </select>
+                                </div>
+
+                                <div class="product-variant quantity mb-2">
+                                    <label>quantity</label>
+                                    <input min="1" max="100" value="1" type="number">
+                                    <button type="button" class="btn btn-warning">add to cart</button>
+                                </div>
+
+                                <div class="product-action mb-2">
+                                    <ul>
+                                        <li><a href="#" title="Add to wishlist">+ Add to Wishlist</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                            <ul class="nav nav-tabs justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#description">Description</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#specification">Specification</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#reviews">Reviews</a>
+                                </li>
+                            </ul>
+                                  
+                            <div class="tab-content">
+                                <div class="tab-pane container active" id="description">
+                                    <div class="product-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
+                                        <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane container fade" id="specification">
+
+                                </div>
+                                <div class="tab-pane container fade" id="reviews">
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -202,7 +305,8 @@
                     <div class="col-md-4 col-12 mb-5">
                         <div class="footer-widget">
                             <h4 class="widget-title">CONTACT INFO</h4>
-                            <p class="contact-info adress"><span>Address</span> You address will be here <br> Lorem Ipsum text</p>
+                            <p class="contact-info adress"><span>Address</span> You address will be here <br> Lorem
+                                Ipsum text</p>
 
                             <p class="contact-info phone"><span>Phone</span> </p>
                             <p>01234 567 890 <br> 01234 567 891</p>
@@ -266,7 +370,9 @@
 
                     <div class="col-md-6 col-12">
                         <div class="footer-payments-image text-right">
-                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/payment-support_large.png" alt="">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-src="images/payment-support_large.png" alt="">
                         </div>
                     </div>
 

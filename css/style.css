@@ -124,6 +124,10 @@ img.loaded {
     opacity: 1;
 }
 
+.hero-item {
+    display: none;
+}
+
 /*
     HEADER STYLE
 */
