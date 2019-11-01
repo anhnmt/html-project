@@ -2,7 +2,7 @@ $(document).ready(function() {
     'use strict'
 
     /*---Slick-slider JS---*/
-    require(["../js/slick-slider/slick.min.js"], function(slick) {
+    require(["js/slick-slider/slick.min.js"], function(slick) {
         $('.hero-slider').slick({
             arrows: false,
             dots: true,
@@ -14,20 +14,20 @@ $(document).ready(function() {
     });
     
     /*---Lazyload---*/
-    require(["../js/lazyload/lazyload.min.js"], function(LazyLoad) {
+    require(["js/lazyload/lazyload.min.js"], function(LazyLoad) {
         window.ll = new LazyLoad({
             elements_selector: ".lazy",
         });
     });
 
     /*---Bootstrap JS---*/
-    require(["../js/bootstrap/bootstrap.bundle.min.js"], function() {
+    require(["js/bootstrap/bootstrap.bundle.min.js"], function() {
         /*---Tooltip---*/
         $('[data-toggle="tooltip"]').tooltip();
     });
 
     /*---ScrollUp JS---*/
-    require(["../js/scrollUp/jquery.scrollUp.min.js"], function(scrollUp) {
+    require(["js/scrollUp/jquery.scrollUp.min.js"], function(scrollUp) {
         $.scrollUp({
             easingType: 'linear',
             scrollSpeed: 900,
