@@ -115,6 +115,14 @@ body.block {
     }
 }
 
+img[data-src] {
+    opacity: 0;
+}
+
+/* real image */
+img.loaded {
+    opacity: 1;
+}
 
 /*
     HEADER STYLE

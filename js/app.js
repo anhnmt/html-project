@@ -1,8 +1,40 @@
 $(document).ready(function() {
     'use strict'
 
-    /*---Tooltip---*/
-    $('[data-toggle="tooltip"]').tooltip();
+    /*---Slick-slider JS---*/
+    require(["../js/slick-slider/slick.min.js"], function(slick) {
+        $('.hero-slider').slick({
+            arrows: false,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 9000,
+            fade: true,
+            lazyLoad: 'ondemand',
+        });
+    });
+    
+    /*---Lazyload---*/
+    require(["../js/lazyload/lazyload.min.js"], function(LazyLoad) {
+        window.ll = new LazyLoad({
+            elements_selector: ".lazy",
+        });
+    });
+
+    /*---Bootstrap JS---*/
+    require(["../js/bootstrap/bootstrap.bundle.min.js"], function() {
+        /*---Tooltip---*/
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    /*---ScrollUp JS---*/
+    require(["../js/scrollUp/jquery.scrollUp.min.js"], function(scrollUp) {
+        $.scrollUp({
+            easingType: 'linear',
+            scrollSpeed: 900,
+            animation: 'fade',
+            scrollText: '<i class="fas fa-arrow-up"></i>',
+        });
+    });
 
     /*---Stickey Menu---*/
     var navbarSticky = $(".header-bottom");
@@ -19,14 +51,6 @@ $(document).ready(function() {
         }
     });
 
-    /*---Scroll Up---*/
-    $.scrollUp({
-        easingType: 'linear',
-        scrollSpeed: 900,
-        animation: 'fade',
-        scrollText: '<i class="fas fa-arrow-up"></i>',
-    });
-
     /*---Offcanvas Menu---*/
     $('.navbar-toggler').on('click', function() {
         $('body').addClass('block');
@@ -39,15 +63,4 @@ $(document).ready(function() {
         $('#header-navbar').removeClass('show');
         $('.overlay').hide();
     });
-
-    /*---Slick Slider---*/
-    $('.hero-slider')
-        .slick({
-            arrows: false,
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 9000,
-            lazyLoad: 'ondemand',
-            fade: true,
-        });
 });
