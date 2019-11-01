@@ -70,13 +70,13 @@
 }
 
 .product-variant.quantity input {
-    width: 130px;
     border: 1px solid #ebebeb;
     background: none;
     height: 42px;
     padding: 0 12px;
     border-radius: 5px;
     margin-left: 15px;
+    font-size: 15px;
 }
 
 .product-variant.color select {
@@ -86,6 +86,7 @@
     padding: 0 12px;
     border-radius: 5px;
     margin-left: 15px;
+    font-size: 15px;
 }
 
 .product-variant.quantity button {
