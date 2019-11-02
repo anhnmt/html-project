@@ -13,6 +13,17 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+body {
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    letter-spacing: -0.025em;
+}
+
 img,
 video {
     max-width: 100%;
@@ -607,7 +618,7 @@ img.loaded {
 
 /* Footer Top */
 .footer {
-    background: #fefcef no-repeat scroll center center / cover;
+    background: #fff;
 }
 
 .footer-bottom {

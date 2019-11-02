@@ -1,8 +1,8 @@
-.breadcrumb_content {
+.breadcrumb-content {
     padding: 22px 0;
 }
 
-.breadcrumb_content ul li {
+.breadcrumb-content ul li {
     display: inline-block;
     text-transform: uppercase;
     font-size: 14px;
@@ -11,11 +11,11 @@
     position: relative;
 }
 
-.breadcrumb_content ul li:last-child {
+.breadcrumb-content ul li:last-child {
     margin-right: 0;
 }
 
-.breadcrumb_content ul li:not(:last-child)::before {
+.breadcrumb-content ul li:not(:last-child)::before {
     position: absolute;
     content: "/";
     right: 0;
@@ -23,12 +23,18 @@
     transform: translatey(-50%);
 }
 
-.breadcrumb_content ul li a {
+.breadcrumb-content ul li a {
     color: #999;
 }
 
 
+/*
+    PRODUCT CSS
+*/
 
+.zoom-image {
+    border: 1px solid #f0f0f0;
+}
 
 .product-detail h1 {
     text-transform: capitalize;
@@ -40,6 +46,11 @@
 
 .product-detail .product-desc {
     border-bottom: 1px solid #f0f0f0;
+}
+
+.product-detail .product-desc p {
+    font-size: 14px;
+    line-height: 26px;
 }
 
 .product-detail .price-box span {
@@ -112,8 +123,13 @@
     line-height: 28px;
 }
 
+.product-info {
+    background: #f6f6f6;
+}
+
 .nav-tabs {
     border-bottom: none;
+    padding-bottom: 15px;
 }
 
 .nav-tabs .nav-item {
@@ -121,11 +137,95 @@
 }
 
 .nav-tabs .nav-link {
+    color: #a9a9a9;
     border: none;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
+    position: relative;
+}
+
+.product-info .nav-item .nav-link {
+    display: block;
+    float: left;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #a9a9a9;
+    font-weight: 600;
+    margin-right: 35px;
+    line-height: 26px;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-
+    color: #333333;
 }
+
+.product-info .nav-item .nav-link::before {
+    content: "";
+    width: 0;
+    left: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    bottom: 0;
+    height: 2px;
+    background: #ffd54c;
+    position: absolute;
+}
+
+.product-info .nav-item .nav-link.active::before {
+    width: 100%;
+}
+
+
+
+
+.product-review h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.product-review-form textarea {
+    border: 1px solid #ddd;
+    background: none;
+    height: 120px;
+    resize: none;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 0 20px;
+}
+
+.product-review-form input {
+    border: 1px solid #ddd;
+    background: none;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+}
+
+.product-review-form button {
+    border: none;
+    background: #3E444A;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 15px;
+    display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.product-review-form button:hover {
+    background: #ffd54c;
+    color: #ffffff;
+}
+
+/*
+    CUSTOM CSS
+*/
