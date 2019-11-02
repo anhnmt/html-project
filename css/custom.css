@@ -156,7 +156,8 @@
     padding-bottom: 10px;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
     color: #333333;
 }
 
@@ -176,9 +177,6 @@
 .product-info .nav-item .nav-link.active::before {
     width: 100%;
 }
-
-
-
 
 .product-review h2 {
     font-size: 18px;
@@ -224,6 +222,84 @@
     color: #ffffff;
 }
 
+
 /*
-    CUSTOM CSS
+    LOGIN CSS
 */
+
+.login-submit {
+    text-align: right;
+}
+
+.account-form form {
+    border: 1px solid #f0f0f0;
+    padding: 23px 20px 29px;
+    border-radius: 5px;
+}
+
+.account-form h2 {
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.account-form p {
+    margin-bottom: 20px;
+}
+
+.account-form label {
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 12px;
+    margin-bottom: 12px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.account-form input {
+    border: 1px solid #f0f0f0;
+    height: 40px;
+    max-width: 100%;
+    padding: 0 20px;
+    background: none;
+    width: 100%;
+}
+
+.login-submit label input[type="checkbox"] {
+    width: 15px;
+    height: 13px;
+    margin-right: 3px;
+}
+
+.login-submit a {
+    font-size: 13px;
+    float: left;
+    line-height: 39px;
+}
+
+.account-form button {
+    background: #ffd54c;
+    border: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    height: 34px;
+    line-height: 21px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.account-form button:hover {
+    background: #333;
+}

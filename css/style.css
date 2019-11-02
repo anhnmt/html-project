@@ -249,7 +249,7 @@ img.loaded {
     color: #ffd54c;
 }
 
-.nav-link {
+.main-menu .nav-link {
     display: block;
     padding: 14px 30px 14px 0!important;
     font-size: 15px;
@@ -639,6 +639,148 @@ img.loaded {
 .item-product .item-image .item-wishlist a:hover {
     color: #202020;
     border-color: #202020;
+}
+
+.call-to-action {
+    background: #ffd54c;
+    padding: 42px 0 45px;
+}
+
+.call-action-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .call-action-inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.call-text h3 {
+    font-size: 30px;
+    line-height: 39px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 767px) {
+    .call-text h3 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .call-text h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .call-text h3 {
+        font-size: 25px;
+    }
+}
+
+.call-text h3 span {
+    font-weight: bold;
+}
+
+.call-text p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+@media only screen and (max-width: 767px) {
+    .discover-now {
+        margin-bottom: 15px;
+    }
+}
+
+.discover-now a {
+    line-height: 48px;
+    background: #333;
+    color: #fff;
+    padding: 0 33px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+}
+
+@media only screen and (max-width: 767px) {
+    .discover-now a {
+        line-height: 38px;
+        padding: 0 22px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .discover-now a {
+        line-height: 43px;
+        padding: 0 11px;
+        font-size: 13px;
+    }
+}
+
+.link-follow ul li a {
+    width: 48px;
+    height: 48px;
+    line-height: 46px;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    border: 1px solid #42474a;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    .link-follow ul li a {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+    }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .link-follow ul li a {
+        width: 42px;
+        height: 42px;
+        line-height: 40px;
+    }
+}
+
+.link-follow ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.link-follow ul li {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .link-follow ul li {
+        margin-right: 3px;
+    }
 }
 
 
