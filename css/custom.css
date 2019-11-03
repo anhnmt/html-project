@@ -303,3 +303,237 @@
 .account-form button:hover {
     background: #333;
 }
+
+
+/*
+    CART CSS
+*/
+
+.table-desc {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 60px;
+    margin-top: 2px;
+}
+
+.table-desc .cart-page table {
+    width: 100%;
+}
+
+.table-responsive table thead {
+    background: #f2f2f2;
+}
+
+.cart-page table thead tr:last-child th,
+.table-desc table tbody tr td:last-child {
+    border-right: 0;
+}
+
+.table-desc .cart-page table thead tr th {
+    border-bottom: 3px solid #ffd54c;
+    border-right: 1px solid #f0f0f0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px;
+    text-align: center;
+}
+
+.table-responsive table thead tr th {
+    text-align: center;
+}
+
+.table-desc .cart-page table tbody tr td.product-name a {
+    color: #333;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table-desc .cart-page table tbody tr td.product-quantity label {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.table-desc .cart-page table tbody tr td.product-quantity input {
+    height: 40px;
+    padding: 0 5px 0 10px;
+    background: none;
+    border: 1px solid #f0f0f0;
+}
+
+.table-desc .cart-page table tbody tr td.product-remove {
+    min-width: 100px;
+}
+
+.table-desc .cart-page table tbody tr td {
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    text-align: center;
+    padding: 10px;
+}
+
+.table-responsive table tbody tr td {
+    border-right: 1px solid #f0f0f0;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-align: center;
+    min-width: 150px;
+}
+
+.cart-submit {
+    text-align: right;
+    padding: 12px;
+}
+
+.cart-submit button {
+    background: #333;
+    border: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    height: 38px;
+    line-height: 18px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.cart-submit button:hover {
+    background: #ffd54c;
+}
+
+.coupon {
+    margin-bottom: 60px;
+}
+
+.coupon-code {
+    border: 1px solid #f0f0f0;
+}
+
+.coupon-code h3 {
+    color: #ffffff;
+    line-height: 36px;
+    padding: 5px 15px;
+    background: #333;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+    .coupon-code.left {
+        margin-bottom: 59px;
+    }
+}
+
+.coupon-inner {
+    padding: 10px 20px 25px;
+}
+
+.coupon-inner p {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.coupon-inner input {
+    border: 1px solid #f0f0f0;
+    height: 42px;
+    background: none;
+    padding: 0 20px;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #333;
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .coupon-inner input {
+        margin-bottom: 24px;
+        width: 100%;
+    }
+}
+
+.coupon-inner button {
+    background: #333;
+    border: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    height: 38px;
+    line-height: 18px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.coupon-inner button:hover {
+    background: #ffd54c;
+}
+
+.cart-subtotal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.coupon-inner a {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+
+.checkout-btn {
+    text-align: right;
+}
+
+.checkout-btn a {
+    background: #ffd54c;
+    font-size: 15px;
+    padding: 3px 14px;
+    line-height: 30px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.checkout-btn a:hover {
+    background: #333;
+    color: #ffffff;
+}
+
+.cart-subtotal p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cart-subtotal p.cart-amount {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+    .cart-subtotal p.cart-amount {
+        font-size: 14px;
+    }
+}
+
+.product-thumb img {
+    width: 75px;
+}
