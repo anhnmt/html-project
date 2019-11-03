@@ -218,7 +218,7 @@
                     <div class="col-md-6">
                         <div class="product-image pb-3">
                             <div class="zoom-image p-4 d-flex justify-content-center">
-                                <img id="zoom1" src="images/products/smartphone/iphone-11-pro-max-256gb-black-400x400.jpg" alt="big-1">
+                                <img id="zoom1" class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/products/smartphone/iphone-11-pro-max-256gb-black-400x400.jpg" alt="big-1">
                             </div>
 
                             <div class="list-images">
@@ -371,7 +371,7 @@
             </div>
         </div>
 
-        <div class="main-products mt-3">
+        <div class="main-products py-3">
             <div class="container">
                 <div class="row no-gutters">
                     <div class="col-12 mb-3">
@@ -768,11 +768,7 @@
 
     <div class="overlay"></div>
 
-    <script src="js/require.js"></script>
-    <!-- JQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- App JS -->
-    <script src="js/app.js"></script>
+    <script src="js/requirejs/require.min.js" data-main="js/app.js"></script>
 </body>
 
 </html>
