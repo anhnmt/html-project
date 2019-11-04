@@ -204,7 +204,7 @@
 .product-review-form button {
     border: none;
     background: #3E444A;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     font-weight: 700;
     padding: 5px 15px;
@@ -219,7 +219,7 @@
 
 .product-review-form button:hover {
     background: #ffd54c;
-    color: #ffffff;
+    color: #fff;
 }
 
 
@@ -284,7 +284,7 @@
 .account-form button {
     background: #ffd54c;
     border: 0;
-    color: #ffffff;
+    color: #fff;
     display: inline-block;
     font-size: 12px;
     font-weight: 700;
@@ -389,7 +389,7 @@
 .cart-submit button {
     background: #333;
     border: 0;
-    color: #ffffff;
+    color: #fff;
     display: inline-block;
     font-size: 12px;
     font-weight: 600;
@@ -405,6 +405,7 @@
 
 .cart-submit button:hover {
     background: #ffd54c;
+    color: #333;
 }
 
 .coupon {
@@ -416,10 +417,10 @@
 }
 
 .coupon-code h3 {
-    color: #ffffff;
+    color: #333;
     line-height: 36px;
     padding: 5px 15px;
-    background: #333;
+    background: #ffd54c;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
@@ -460,7 +461,7 @@
 .coupon-inner button {
     background: #333;
     border: 0;
-    color: #ffffff;
+    color: #fff;
     display: inline-block;
     font-size: 12px;
     font-weight: 600;
@@ -476,6 +477,7 @@
 
 .coupon-inner button:hover {
     background: #ffd54c;
+    color: #333;
 }
 
 .cart-subtotal {
@@ -503,9 +505,10 @@
 }
 
 .checkout-btn a {
-    background: #ffd54c;
-    font-size: 14px;
+    background: #333;
+    font-size: 12px;
     padding: 5px 15px;
+    color: #fff;
     line-height: 30px;
     font-weight: 600;
     display: inline-block;
@@ -514,8 +517,8 @@
 }
 
 .checkout-btn a:hover {
-    background: #333;
-    color: #ffffff;
+    background: #ffd54c;
+    color: #333;
 }
 
 .cart-subtotal p {
@@ -557,7 +560,7 @@
 
 .table-desc.wishlist table tbody tr td.product-total a:hover {
     background: #333;
-    color: #ffffff;
+    color: #fff;
 }
 
 .wishlist-share {
