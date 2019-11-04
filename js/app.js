@@ -1,7 +1,7 @@
 requirejs.config({
     paths: {
         'jquery': './jquery.min',
-        'slick': './slick-slider/slick.min',
+        'slick': './slick/slick.min',
         'lazyload': './lazyload/lazyload.min',
         'bootstrap': './bootstrap/bootstrap.bundle.min',
         'scrollUp': './scrollUp/jquery.scrollUp.min',
