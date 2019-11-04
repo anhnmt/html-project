@@ -641,6 +641,10 @@ img.loaded {
     left: 0;
 }
 
+.item-product:hover img {
+    transform: scale(0.8);
+}
+
 .item-product .item-image .item-wishlist a:hover {
     color: #202020;
     border-color: #202020;
