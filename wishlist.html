@@ -201,7 +201,7 @@
                         <div class="breadcrumb-content">
                             <ul>
                                 <li><a href="index.html">Trang chủ</a></li>
-                                <li>Đăng nhập</li>
+                                <li>Danh sách yêu thích</li>
                             </ul>
                         </div>
                     </div>
@@ -209,58 +209,74 @@
             </div>
         </div>
 
-        <div class="customer-login mb-5">
+        <div class="wishlist-area my-3">
             <div class="container">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-desc wishlist">
+                                <div class="cart-page table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="product-thumb">Ảnh</th>
+                                                <th class="product-name">Sản phẩm</th>
+                                                <th class="product-price">Đơn giá</th>
+                                                <th class="product-total">Thêm vào giỏ</th>
+                                                <th class="product-remove">Xoá</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="product-thumb">
+                                                    <a href="#"><img src="images/products/smartphone/realme-3-halloween.jpg" alt=""></a>
+                                                </td>
+                                                <td class="product-name"><a href="#">REALME 3 (3GB/32GB)</a></td>
+                                                <td class="product-price">3.190.000₫</td>
+                                                <td class="product-total"><a href="#">Thêm vào giỏ</a></td>
+                                                <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="product-thumb">
+                                                    <a href="#"><img src="images/products/smartphone/iphone-11-pro-max-256gb-black-400x400.jpg" alt=""></a>
+                                                </td>
+                                                <td class="product-name"><a href="#">IPHONE 11 PRO MAX 256GB</a></td>
+                                                <td class="product-price">37.990.000đ</td>
+                                                <td class="product-total"><a href="#">Thêm vào giỏ</a></td>
+                                                <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="product-thumb">
+                                                    <a href="#"><img src="images/products/laptop/mbp13-gray_2.jpg" alt=""></a>
+                                                </td>
+                                                <td class="product-name"><a href="#">APPLE MACBOOK PRO 13 INCH 128GB MPXQ2 CHÍNH HÃNG (2017)</a></td>
+                                                <td class="product-price">27.500.000₫</td>
+                                                <td class="product-total"><a href="#">Thêm vào giỏ</a></td>
+                                                <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
                 <div class="row">
-                    <!--login area start-->
-                    <div class="col-lg-6 col-md-6">
-                        <div class="account-form">
-                            <h2>Đăng nhập</h2>
-                            <form action="#">
-                                <p>
-                                    <label>Username or email <span>*</span></label>
-                                    <input type="text">
-                                </p>
-                                <p>
-                                    <label>Passwords <span>*</span></label>
-                                    <input type="password">
-                                </p>
-                                <div class="login-submit">
-                                    <a href="#">Quên mật khẩu?</a>
-                                    <label for="remember">
-                                            <input id="remember" type="checkbox">
-                                            Ghi nhớ tài khoản
-                                        </label>
-                                    <button type="submit">Đăng nhập</button>
-
-                                </div>
-
-                            </form>
+                    <div class="col-12">
+                        <div class="wishlist-share">
+                            <h4>Chia sẻ:</h4>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
                         </div>
                     </div>
-                    <!--login area start-->
-
-                    <!--register area start-->
-                    <div class="col-lg-6 col-md-6 pt-3 pt-md-0">
-                        <div class="account-form register">
-                            <h2>Đăng ký</h2>
-                            <form action="#">
-                                <p>
-                                    <label>Email address <span>*</span></label>
-                                    <input type="text">
-                                </p>
-                                <p>
-                                    <label>Passwords <span>*</span></label>
-                                    <input type="password">
-                                </p>
-                                <div class="login-submit">
-                                    <button type="submit">Đăng ký</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!--register area end-->
                 </div>
+
             </div>
         </div>
 

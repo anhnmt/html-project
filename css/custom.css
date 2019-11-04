@@ -504,8 +504,8 @@
 
 .checkout-btn a {
     background: #ffd54c;
-    font-size: 15px;
-    padding: 3px 14px;
+    font-size: 14px;
+    padding: 5px 15px;
     line-height: 30px;
     font-weight: 600;
     display: inline-block;
@@ -536,4 +536,41 @@
 
 .product-thumb img {
     width: 75px;
+}
+
+
+/*
+    WISHLIST CSS
+*/
+
+.table-desc.wishlist table tbody tr td.product-total a {
+    background: #ffd54c;
+    font-size: 12px;
+    font-weight: 700;
+    height: 38px;
+    line-height: 18px;
+    padding: 10px 20px;
+    color: #333;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.table-desc.wishlist table tbody tr td.product-total a:hover {
+    background: #333;
+    color: #ffffff;
+}
+
+.wishlist-share {
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid #f0f0f0;
+}
+
+.wishlist-share ul li {
+    display: inline-block;
+}
+
+.wishlist-share ul li a {
+    padding: 0 10px;
+    display: block;
 }
