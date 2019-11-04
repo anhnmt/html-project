@@ -328,7 +328,7 @@ img.loaded {
         width: 80%;
         /* padding-right: 1rem;
         padding-left: 1rem; */
-        background-color: #bebebe;
+        background-color: #fff;
         overflow: scroll;
         transition: -webkit-transform .3s ease-in-out;
         transition: all .3s ease-in-out;

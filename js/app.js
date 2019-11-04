@@ -74,5 +74,11 @@ requirejs(['jquery'], function($) {
             $('#header-navbar').removeClass('show');
             $('.overlay').hide();
         });
+		
+		
+		$(".product-remove").click(function(event) {
+		  event.preventDefault();
+		  $(this).parent('tr').remove();
+		});
     });
 });
