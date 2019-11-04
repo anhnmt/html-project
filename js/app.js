@@ -1,84 +1,89 @@
 requirejs.config({
     paths: {
-        'jquery': './jquery.min',
-        'slick': './slick/slick.min',
-        'lazyload': './lazyload/lazyload.min',
-        'bootstrap': './bootstrap/bootstrap.bundle.min',
-        'scrollUp': './scrollUp/jquery.scrollUp.min',
-    }
+        jquery: './jquery.min',
+        slick: './slick/slick.min',
+        lazyload: './lazyload/lazyload.min',
+        bootstrap: './bootstrap/bootstrap.bundle.min',
+        scrollUp: './scrollUp/jquery.scrollUp.min',
+    },
+    shim: {
+        slick: {
+            deps: ["jquery"]
+        },
+        bootstrap: {
+            deps: ["jquery"]
+        },
+        scrollUp: {
+            deps: ["jquery"]
+        }
+    },
 });
 
-requirejs(['jquery'], function($) {
-    $(function() {
-        'use strict'
+define(['jquery', 'bootstrap'], function($) {
+    'use strict'
 
-        /*---Slick-slider JS---*/
-        require(['slick'], function(slick) {
-            $('.hero-slider').slick({
-                arrows: false,
-                dots: true,
-                autoplay: true,
-                autoplaySpeed: 9000,
-                fade: true,
-                lazyLoad: 'ondemand',
-            });
+    /*---Lazyload---*/
+    require(['lazyload'], function(LazyLoad) {
+        window.ll = new LazyLoad({
+            elements_selector: ".lazy",
         });
+    });
 
-        /*---Lazyload---*/
-        require(['lazyload'], function(LazyLoad) {
-            window.ll = new LazyLoad({
-                elements_selector: ".lazy",
-            });
+    /*---Slick-slider JS---*/
+    require(['slick'], function(slick) {
+        $('.hero-slider').slick({
+            arrows: false,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 9000,
+            fade: true,
+            lazyLoad: 'ondemand',
         });
+    });
 
-        /*---Bootstrap JS---*/
-        require(['bootstrap'], function() {
-            /*---Tooltip---*/
-            $('[data-toggle="tooltip"]').tooltip();
+    /*---ScrollUp JS---*/
+    require(['scrollUp'], function(scrollUp) {
+        $.scrollUp({
+            easingType: 'linear',
+            scrollSpeed: 900,
+            animation: 'fade',
+            scrollText: '<i class="fas fa-arrow-up"></i>',
         });
+    });
 
-        /*---ScrollUp JS---*/
-        require(['scrollUp'], function(scrollUp) {
-            $.scrollUp({
-                easingType: 'linear',
-                scrollSpeed: 900,
-                animation: 'fade',
-                scrollText: '<i class="fas fa-arrow-up"></i>',
-            });
-        });
+    /*---Tooltip---*/
+    $('[data-toggle="tooltip"]').tooltip();
 
-        /*---Stickey Menu---*/
-        var navbarSticky = $(".header-bottom");
-        var stickyTop = navbarSticky.offset().top;
-        
-        /*---Scroll JS---*/
-        $(window).on('scroll', function() {
-            var windowTop = $(window).scrollTop();
+    /*---Stickey Menu---*/
+    var navbarSticky = $(".header-bottom");
+    var stickyTop = navbarSticky.offset().top;
 
-            if (stickyTop < windowTop) {
-                navbarSticky.addClass("fixed-top");
-            } else {
-                navbarSticky.removeClass("fixed-top");
-            }
-        });
+    /*---Scroll JS---*/
+    $(window).on('scroll', function() {
+        var windowTop = $(window).scrollTop();
 
-        /*---Offcanvas Menu---*/
-        $('.navbar-toggler').on('click', function() {
-            $('body').addClass('block');
-            $('#header-navbar').addClass('show');
-            $('.overlay').show();
-        });
+        if (stickyTop < windowTop) {
+            navbarSticky.addClass("fixed-top");
+        } else {
+            navbarSticky.removeClass("fixed-top");
+        }
+    });
 
-        $('.overlay').on('click', function() {
-            $('body').removeClass('block');
-            $('#header-navbar').removeClass('show');
-            $('.overlay').hide();
-        });
-		
-		
-		$(".product-remove").click(function(event) {
-		  event.preventDefault();
-		  $(this).parent('tr').remove();
-		});
+    /*---Offcanvas Menu---*/
+    $('.navbar-toggler').on('click', function() {
+        $('body').addClass('block');
+        $('#header-navbar').addClass('show');
+        $('.overlay').show();
+    });
+
+    $('.overlay').on('click', function() {
+        $('body').removeClass('block');
+        $('#header-navbar').removeClass('show');
+        $('.overlay').hide();
+    });
+
+    $(".product-remove").click(function(event) {
+        event.preventDefault();
+        $(this).parent('tr').remove();
     });
 });
