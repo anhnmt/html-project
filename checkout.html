@@ -210,156 +210,58 @@
             </div>
         </div>
 
-        <div class="main-checkout my-3">
+        <div class="main-checkout mt-3 mb-5">
             <div class="container">
-                <div class="checkout_form">
+                <div class="checkout-form">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
-                            <form action="#" _lpchecked="1">
+                            <form action="#" -lpchecked="1">
                                 <h3>Billing Details</h3>
                                 <div class="row">
-
-                                    <div class="col-lg-6 mb-20">
-                                        <label>First Name <span>*</span></label>
+                                    <div class="col-12 mb-2">
+                                        <label>Họ và tên</label>
                                         <input type="text">
                                     </div>
-                                    <div class="col-lg-6 mb-20">
-                                        <label>Last Name <span>*</span></label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <label>Company Name</label>
-                                        <input type="text">
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <label for="country">country <span>*</span></label>
-                                        <select class="niceselect_option" name="cuntry" id="country" style="display: none;">
-                                                <option value="2">bangladesh</option>
-                                                <option value="3">Algeria</option>
-                                                <option value="4">Afghanistan</option>
-                                                <option value="5">Ghana</option>
-                                                <option value="6">Albania</option>
-                                                <option value="7">Bahrain</option>
-                                                <option value="8">Colombia</option>
-                                                <option value="9">Dominican Republic</option>
-        
-                                            </select>
-                                        <div class="nice-select niceselect_option" tabindex="0"><span class="current">bangladesh</span>
-                                            <ul class="list">
-                                                <li data-value="2" class="option selected focus">bangladesh</li>
-                                                <li data-value="3" class="option">Algeria</li>
-                                                <li data-value="4" class="option">Afghanistan</li>
-                                                <li data-value="5" class="option">Ghana</li>
-                                                <li data-value="6" class="option">Albania</li>
-                                                <li data-value="7" class="option">Bahrain</li>
-                                                <li data-value="8" class="option">Colombia</li>
-                                                <li data-value="9" class="option">Dominican Republic</li>
-                                            </ul>
-                                        </div>
+                                    <div class="col-12 mb-2">
+                                        <label for="country">Thành phố <span>*</span></label>
+                                        <select class="form-control" name="cuntry" id="country">
+                                            <option value="2">Hà nội</option>
+                                            <option value="3">TP. HCM</option>
+                                            <option value="4">Đà nẵng</option>
+                                            <option value="5">Nghệ an</option>
+                                            <option value="6">Huế</option>
+                                            <option value="7">Nha trang</option>
+                                        </select>
                                     </div>
 
-                                    <div class="col-12 mb-20">
-                                        <label>Street address <span>*</span></label>
-                                        <input placeholder="House number and street name" type="text">
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <label>Town / City <span>*</span></label>
+                                    <div class="col-12 mb-2">
+                                        <label>Quận / Huyện <span>*</span></label>
                                         <input type="text">
                                     </div>
-                                    <div class="col-12 mb-20">
-                                        <label>State / County <span>*</span></label>
-                                        <input type="text">
+
+                                    <div class="col-12 mb-2">
+                                        <label>Địa chỉ nhận hàng <span>*</span></label>
+                                        <input placeholder="Số nhà, ..." type="text">
                                     </div>
-                                    <div class="col-lg-6 mb-20">
-                                        <label>Phone<span>*</span></label>
+                                    <div class="col-12 mb-2">
+                                        <input placeholder="Phường, xã, ..." type="text">
+                                    </div>
+
+                                    <div class="col-lg-6 mb-2">
+                                        <label>Số điện thoại<span>*</span></label>
                                         <input type="text">
 
                                     </div>
-                                    <div class="col-lg-6 mb-20">
-                                        <label> Email Address <span>*</span></label>
+                                    <div class="col-lg-6 mb-2">
+                                        <label>Địa chỉ email <span>*</span></label>
                                         <input type="text">
 
                                     </div>
-                                    <div class="col-12 mb-20">
-                                        <input id="account" type="checkbox" data-target="createp_account">
-                                        <label for="account" data-toggle="collapse" data-target="#collapseOne" aria-controls="collapseOne">Create an account?</label>
 
-                                        <div id="collapseOne" class="collapse one" data-parent="#accordion">
-                                            <div class="card-body1">
-                                                <label> Account password <span>*</span></label>
-                                                <input placeholder="password" type="password">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-20">
-                                        <input id="address" type="checkbox" data-target="createp_account">
-                                        <label class="righ_0" for="address" data-toggle="collapse" data-target="#collapsetwo" aria-controls="collapseOne">Ship to a different address?</label>
-
-                                        <div id="collapsetwo" class="collapse one" data-parent="#accordion">
-                                            <div class="row">
-                                                <div class="col-lg-6 mb-20">
-                                                    <label>First Name <span>*</span></label>
-                                                    <input type="text">
-                                                </div>
-                                                <div class="col-lg-6 mb-20">
-                                                    <label>Last Name <span>*</span></label>
-                                                    <input type="text">
-                                                </div>
-                                                <div class="col-12 mb-20">
-                                                    <label>Company Name</label>
-                                                    <input type="text">
-                                                </div>
-                                                <div class="col-12 mb-20">
-                                                    <div class="select_form_select">
-                                                        <label for="countru_name">Country <span>*</span></label>
-                                                        <select class="form-control" name="cuntry" id="countru_name">
-                                                                <option value="2">bangladesh</option>
-                                                                <option value="3">Algeria</option>
-                                                                <option value="4">Afghanistan</option>
-                                                                <option value="5">Ghana</option>
-                                                                <option value="6">Albania</option>
-                                                                <option value="7">Bahrain</option>
-                                                                <option value="8">Colombia</option>
-                                                                <option value="9">Dominican Republic</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 mb-20">
-                                                    <label>Street address <span>*</span></label>
-                                                    <input placeholder="House number and street name" type="text">
-                                                </div>
-                                                <div class="col-12 mb-20">
-                                                    <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
-                                                </div>
-                                                <div class="col-12 mb-20">
-                                                    <label>Town / City <span>*</span></label>
-                                                    <input type="text">
-                                                </div>
-                                                <div class="col-12 mb-20">
-                                                    <label>State / County <span>*</span></label>
-                                                    <input type="text">
-                                                </div>
-                                                <div class="col-lg-6 mb-20">
-                                                    <label>Phone<span>*</span></label>
-                                                    <input type="text">
-
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <label> Email Address <span>*</span></label>
-                                                    <input type="text">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="col-12">
                                         <div class="order-notes">
-                                            <label for="order_note">Order Notes</label>
-                                            <textarea id="order_note" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                            <label for="order-note">Ghi chú</label>
+                                            <textarea id="order-note" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -368,7 +270,7 @@
                         <div class="col-lg-6 col-md-6">
                             <form action="#">
                                 <h3>Your order</h3>
-                                <div class="order_table table-responsive">
+                                <div class="order-table table-responsive">
                                     <table>
                                         <thead>
                                             <tr>
@@ -403,36 +305,24 @@
                                                 <th>Shipping</th>
                                                 <td><strong>$5.00</strong></td>
                                             </tr>
-                                            <tr class="order_total">
+                                            <tr class="order-total">
                                                 <th>Order Total</th>
                                                 <td><strong>$220.00</strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>
                                 </div>
-                                <div class="payment_method">
+                                <div class="payment-method">
                                     <div class="panel-default">
-                                        <input id="payment" name="check_method" type="radio" data-target="createp_account">
-                                        <label for="payment" data-toggle="collapse" data-target="#method" aria-controls="method">Create an account?</label>
-
-                                        <div id="method" class="collapse one" data-parent="#accordion">
-                                            <div class="card-body1">
-                                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                                            </div>
-                                        </div>
+                                        <input id="payment" name="check-method" type="radio" data-target="createp-account">
+                                        <label for="payment">Credit card</label>
                                     </div>
                                     <div class="panel-default">
-                                        <input id="payment_defult" name="check_method" type="radio" data-target="createp_account">
-                                        <label for="payment_defult" data-toggle="collapse" data-target="#collapsedefult" aria-controls="collapsedefult">PayPal <img src="assets/img/icon/papyel.png" alt=""></label>
-
-                                        <div id="collapsedefult" class="collapse one" data-parent="#accordion">
-                                            <div class="card-body1">
-                                                <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                                            </div>
-                                        </div>
+                                        <input id="payment-defult" name="check-method" type="radio" data-target="createp-account">
+                                        <label for="payment-defult">PayPal</label>
                                     </div>
-                                    <div class="order_button">
-                                        <button type="submit">Proceed to PayPal</button>
+                                    <div class="order-button">
+                                        <button type="submit">Thanh toán ngay</button>
                                     </div>
                                 </div>
                             </form>
