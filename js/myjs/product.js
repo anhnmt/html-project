@@ -35,12 +35,6 @@ $("tbody .product-remove").click(function(event) {
 $('.product-quantity input').change();
 tongCong();
 
-$("tbody .product-add").click(function(event) {
-    event.preventDefault();
-    var count = parseFloat($('.cart-quantity').html());
-    $('.cart-quantity').html(count + 1);
-});
-
 $("tbody .product-add, .add-cart").click(function(event) {
     event.preventDefault();
     var count = parseFloat($('.cart-quantity').html());
