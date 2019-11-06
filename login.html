@@ -217,21 +217,28 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="account-form">
                             <h2>Đăng nhập</h2>
-                            <form action="#">
-                                <p>
-                                    <label>Tên đăng nhập hoặc email <span>*</span></label>
-                                    <input type="text">
-                                </p>
-                                <p>
-                                    <label>Mật khẩu <span>*</span></label>
-                                    <input type="password">
-                                </p>
+                            <form action="#" onsubmit="return false;">
+                                <div class="form-group">
+                                    <div class="mb-3">
+                                        <label for="login_Email">Địa chỉ email <span>*</span></label>
+                                        <input type="email" class="form-control txt_login" id="login_Email" placeholder="Vui lòng nhập email">
+                                        <div class="invalid-feedback">
+                                            Bạn chưa nhập email hoặc không đúng định dạng.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="login_Password">Mật khẩu <span>*</span></label>
+                                        <input type="password" class="form-control txt_login" id="login_Password" placeholder="Vui lòng nhập mật khẩu">
+                                        <div class="invalid-feedback">
+                                            Bạn chưa nhập mật khẩu hoặc mật khẩu ít hơn 5 ký tự.
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="login-submit">
                                     <a href="#">Quên mật khẩu?</a>
-                                    <button type="submit">Đăng nhập</button>
-
+                                    <button class="btn btn-primary" type="submit" id="btn_login">Đăng nhập</button>
                                 </div>
-
                             </form>
                         </div>
                     </div>
@@ -241,17 +248,26 @@
                     <div class="col-lg-6 col-md-6 pt-3 pt-md-0">
                         <div class="account-form register">
                             <h2>Đăng ký</h2>
-                            <form action="#">
-                                <p>
-                                    <label>Địa chỉ email <span>*</span></label>
-                                    <input type="text">
-                                </p>
-                                <p>
-                                    <label>Mật khẩu <span>*</span></label>
-                                    <input type="password">
-                                </p>
+                            <form action="#" onsubmit="return false;">
+                                <div class="form-group">
+                                    <div class="mb-3">
+                                        <label for="register_Email">Địa chỉ email <span>*</span></label>
+                                        <input type="email" class="form-control txt_register" id="register_Email" placeholder="Vui lòng nhập email">
+                                        <div class="invalid-feedback">
+                                            Bạn chưa nhập email hoặc không đúng định dạng.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="register_Password">Mật khẩu <span>*</span></label>
+                                        <input type="password" class="form-control txt_register" id="register_Password" placeholder="Vui lòng nhập mật khẩu">
+                                        <div class="invalid-feedback">
+                                            Bạn chưa nhập mật khẩu hoặc mật khẩu ít hơn 5 ký tự.
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="login-submit">
-                                    <button type="submit">Đăng ký</button>
+                                    <button class="btn btn-primary" type="submit" id="btn_register">Đăng ký</button>
                                 </div>
                             </form>
                         </div>
@@ -370,7 +386,7 @@
 
     <div class="overlay"></div>
 
-    <script src="js/requirejs/require.min.js" data-main="js/app.js"></script>
+    <script src="js/requirejs/require.min.js" data-main="js/main.js"></script>
 </body>
 
 </html>

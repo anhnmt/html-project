@@ -1,3 +1,12 @@
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.btn-primary.focus,
+.btn-primary:focus {
+    box-shadow: none;
+}
+
 .breadcrumb-content {
     padding: 22px 0;
 }
@@ -245,10 +254,6 @@
     margin-bottom: 30px;
 }
 
-.account-form p {
-    margin-bottom: 20px;
-}
-
 .account-form label {
     font-size: 15px;
     font-weight: 400;
@@ -258,15 +263,6 @@
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
-}
-
-.account-form input {
-    border: 1px solid #f0f0f0;
-    height: 40px;
-    max-width: 100%;
-    padding: 0 20px;
-    background: none;
-    width: 100%;
 }
 
 .login-submit label input[type="checkbox"] {

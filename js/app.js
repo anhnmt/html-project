@@ -1,24 +1,3 @@
-requirejs.config({
-    paths: {
-        jquery: './jquery.min',
-        slick: './slick/slick.min',
-        lazyload: './lazyload/lazyload.min',
-        bootstrap: './bootstrap/bootstrap.bundle.min',
-        scrollUp: './scrollUp/jquery.scrollUp.min',
-    },
-    shim: {
-        slick: {
-            deps: ["jquery"]
-        },
-        bootstrap: {
-            deps: ["jquery"]
-        },
-        scrollUp: {
-            deps: ["jquery"]
-        }
-    },
-});
-
 define(['jquery', 'bootstrap'], function($) {
     'use strict'
 
@@ -37,7 +16,6 @@ define(['jquery', 'bootstrap'], function($) {
             autoplay: true,
             autoplaySpeed: 9000,
             fade: true,
-            lazyLoad: 'ondemand',
         });
     });
 
@@ -85,5 +63,9 @@ define(['jquery', 'bootstrap'], function($) {
     $(".product-remove").click(function(event) {
         event.preventDefault();
         $(this).parent('tr').remove();
+    });
+
+    require(['loginJS'], function() {
+
     });
 });
