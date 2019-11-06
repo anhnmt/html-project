@@ -7,6 +7,7 @@ require.config({
         bootstrap: 'bootstrap/bootstrap.bundle.min',
         scrollUp: 'scrollUp/jquery.scrollUp.min',
         loginJS: 'myjs/login',
+        productJS: 'myjs/product',
     },
     shim: {
         slick: {

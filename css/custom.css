@@ -265,6 +265,10 @@
     transition: .3s;
 }
 
+.account-form label span {
+    color: #ffd54c;
+}
+
 .login-submit label input[type="checkbox"] {
     width: 15px;
     height: 13px;
@@ -572,4 +576,63 @@
 .wishlist-share ul li a {
     padding: 0 10px;
     display: block;
+}
+
+
+/*
+    CHECKOUT CSS
+*/
+
+
+.checkout_form h3 {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #333;
+    font-weight: 500;
+}
+
+.checkout_form label {
+    font-weight: 600;
+}
+
+.checkout_form input {
+    border: 1px solid #f0f0f0;
+    background: none;
+    height: 40px;
+    width: 100%;
+    padding: 0 20px;
+    color: #333;
+}
+
+.checkout_form input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.order-notes label {
+    line-height: 13px;
+}
+
+.order-notes textarea {
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    height: 45px;
+    max-width: 100%;
+    padding: 0 30px 0 20px;
+    background: none;
+    font-size: 13px;
+    resize: none;
+    line-height: 45px;
+    width: 100%;
+    color: #333;
+}
+
+.checkout_form label span {
+    color: #ffd54c;
 }

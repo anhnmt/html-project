@@ -1,6 +1,16 @@
 /*---Check login---*/
+$(function() {
+    var user = sessionStorage.getItem('user');
+    if (user !== null && user !== '') {
+        $('.header-account').html('<a id="btn_logout"><i class="fas fa-user"></i> <span>' + user + '</span></a>');
+    } else {
+        $('.header-account').html('<a href="login.html"><i class="fas fa-user"></i> <span>Đăng nhập</span></a>');
+    }
+});
+
+/*---Click login---*/
 $('.txt_login').bind('blur keyup', function() {
-    check(this);
+    validate(this);
 });
 
 $('#btn_login').on('click', function() {
@@ -14,9 +24,9 @@ $('#btn_login').on('click', function() {
     }
 });
 
-/*---Check register---*/
+/*---Click register---*/
 $('.txt_register').bind('blur keyup', function() {
-    check(this);
+    validate(this);
 });
 
 $('#btn_register').on('click', function() {
@@ -30,7 +40,14 @@ $('#btn_register').on('click', function() {
     }
 });
 
-function check(arg) {
+/*---Click logout---*/
+$('#btn_logout').on('click', function() {
+    alert('Đăng xuất thành công!');
+    sessionStorage.removeItem('user');
+    location.replace('index.html');
+});
+
+function validate(arg) {
     var el = $(arg);
     var value = el.val().trim();
     var id = el.attr('type');

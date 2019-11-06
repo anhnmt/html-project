@@ -391,6 +391,14 @@
     <div class="overlay"></div>
 
     <script src="js/requirejs/require.min.js" data-main="js/main.js"></script>
+    <script>
+        (function() {
+            var user = sessionStorage.getItem('user');
+            if (user === null || user === '') {
+                location.replace('login.html');
+            }
+        })();
+    </script>
 </body>
 
 </html>
