@@ -1,12 +1,12 @@
 require.config({
     deps: ['app'],
     paths: {
-        jquery: './jquery.min',
-        slick: './slick/slick.min',
-        lazyload: './lazyload/lazyload.min',
-        bootstrap: './bootstrap/bootstrap.bundle.min',
-        scrollUp: './scrollUp/jquery.scrollUp.min',
-        loginJS: './myjs/login',
+        jquery: 'jquery.min',
+        slick: 'slick/slick.min',
+        lazyload: 'lazyload/lazyload.min',
+        bootstrap: 'bootstrap/bootstrap.bundle.min',
+        scrollUp: 'scrollUp/jquery.scrollUp.min',
+        loginJS: 'myjs/login',
     },
     shim: {
         slick: {

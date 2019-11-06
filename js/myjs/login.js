@@ -7,7 +7,10 @@ $('#btn_login').on('click', function() {
     $('.txt_login').blur();
 
     if (!$('.txt_login').hasClass('is-invalid')) {
-        alert('OK');
+        alert('Đăng nhập thành công!');
+        var user = $('.txt_login[type="email"]').val();
+        sessionStorage.setItem('user', user);
+        location.replace('index.html');
     }
 });
 
@@ -20,7 +23,10 @@ $('#btn_register').on('click', function() {
     $('.txt_register').blur();
 
     if (!$('.txt_register').hasClass('is-invalid')) {
-        alert('OK');
+        alert('Đăng ký thành công!');
+        var user = $('.txt_register[type="email"]').val();
+        sessionStorage.setItem('user', user);
+        location.replace('index.html');
     }
 });
 

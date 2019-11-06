@@ -65,7 +65,5 @@ define(['jquery', 'bootstrap'], function($) {
         $(this).parent('tr').remove();
     });
 
-    require(['loginJS'], function() {
-
-    });
+    require(['loginJS']);
 });
