@@ -60,10 +60,5 @@ define(['jquery', 'bootstrap'], function($) {
         $('.overlay').hide();
     });
 
-    $(".product-remove").click(function(event) {
-        event.preventDefault();
-        $(this).parent('tr').remove();
-    });
-
     require(['loginJS', 'productJS']);
 });
