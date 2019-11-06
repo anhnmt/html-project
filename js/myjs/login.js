@@ -2,9 +2,8 @@
 $(function() {
     var user = sessionStorage.getItem('user');
     if (user !== null && user !== '') {
-        $('.header-account').html('<a id="btn_logout"><i class="fas fa-user"></i> <span>' + user + '</span></a>');
-    } else {
-        $('.header-account').html('<a href="login.html"><i class="fas fa-user"></i> <span>Đăng nhập</span></a>');
+        $('.header-account').html('<a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-user"></i> <span>' + user + '</span></a>');
+        $('[data-toggle="tooltip"]').tooltip();
     }
 });
 
