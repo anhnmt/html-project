@@ -24,6 +24,10 @@ $('.product-quantity input').bind('change', function() {
 
 $("tbody .product-remove").click(function(event) {
     event.preventDefault();
+    if ($("tbody .product-remove").length === 1) {
+        $("tbody").html('<tr><td colspan="6">Không có gì cả...</td></tr>');
+    }
+
     $(this).parent('tr').remove();
     tongCong();
 });
@@ -33,21 +37,18 @@ tongCong();
 
 $("tbody .product-add").click(function(event) {
     event.preventDefault();
-    // $(this).parent('tr').remove();
     var count = parseFloat($('.cart-quantity').html());
     $('.cart-quantity').html(count + 1);
 });
 
 $("tbody .product-add, .add-cart").click(function(event) {
     event.preventDefault();
-    // $(this).parent('tr').remove();
     var count = parseFloat($('.cart-quantity').html());
     $('.cart-quantity').html(count + 1);
 });
 
 $(".add-wishlist").click(function(event) {
     event.preventDefault();
-    // $(this).parent('tr').remove();
     var count = parseFloat($('.wishlist-quantity').html());
     $('.wishlist-quantity').html(count + 1);
 });

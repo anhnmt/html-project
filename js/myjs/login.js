@@ -2,7 +2,7 @@
 $(function() {
     var user = sessionStorage.getItem('user');
     if (user !== null && user !== '') {
-        $('.header-account').html('<a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-user"></i> <span>' + user + '</span></a>');
+        $('.header-account').html('<a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-user"></i> <span>Xin chào: ' + user + '</span></a>');
         $('[data-toggle="tooltip"]').tooltip();
     }
 });
