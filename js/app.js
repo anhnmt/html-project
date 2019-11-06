@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap'], function($) {
+define(['jquery', 'bootstrap', 'loginJS', 'productJS'], function($) {
     'use strict'
 
     /*---Lazyload---*/
@@ -59,6 +59,4 @@ define(['jquery', 'bootstrap'], function($) {
         $('#header-navbar').removeClass('show');
         $('.overlay').hide();
     });
-
-    require(['loginJS', 'productJS']);
 });

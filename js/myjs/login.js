@@ -1,14 +1,16 @@
 /*---Check login---*/
 $(function() {
-    var user = sessionStorage.getItem('user');
-    if (user !== null && user !== '') {
-        $('.header-account').html('<a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-user"></i> <span>Xin chào: ' + user + '</span></a>');
-        $('[data-toggle="tooltip"]').tooltip();
+    if (('sessionStorage') in window) {
+        var user = sessionStorage.getItem('user');
+        if (user !== null && user !== '') {
+            $('.header-account').html('<a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-user"></i> <span>Xin chào: ' + user + '</span></a>');
+            $('[data-toggle="tooltip"]').tooltip();
+        }
     }
 });
 
 /*---Click login---*/
-$('.txt_login').bind('blur keyup', function() {
+$('.txt_login').bind('blur keyup', function() { 
     validate(this);
 });
 
@@ -17,9 +19,11 @@ $('#btn_login').on('click', function() {
 
     if (!$('.txt_login').hasClass('is-invalid')) {
         alert('Đăng nhập thành công!');
-        var user = $('.txt_login[type="email"]').val();
-        sessionStorage.setItem('user', user);
-        location.replace('index.html');
+        if (('sessionStorage') in window) {
+            var user = $('.txt_login[type="email"]').val();
+            sessionStorage.setItem('user', user);
+            location.replace('index.html');
+        }
     }
 });
 
@@ -33,17 +37,21 @@ $('#btn_register').on('click', function() {
 
     if (!$('.txt_register').hasClass('is-invalid')) {
         alert('Đăng ký thành công!');
-        var user = $('.txt_register[type="email"]').val();
-        sessionStorage.setItem('user', user);
-        location.replace('index.html');
+        if (('sessionStorage') in window) {
+            var user = $('.txt_register[type="email"]').val();
+            sessionStorage.setItem('user', user);
+            location.replace('index.html');
+        }
     }
 });
 
 /*---Click logout---*/
 $('#btn_logout').on('click', function() {
     alert('Đăng xuất thành công!');
-    sessionStorage.removeItem('user');
-    location.replace('index.html');
+    if (('sessionStorage') in window) {
+        sessionStorage.removeItem('user');
+        location.replace('index.html');
+    }
 });
 
 function validate(arg) {
