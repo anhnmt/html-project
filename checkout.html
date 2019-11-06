@@ -219,19 +219,25 @@
                                 <h3>Billing Details</h3>
                                 <div class="row">
                                     <div class="col-12 mb-2">
-                                        <label>Họ và tên</label>
+                                        <label>Họ và tên<span>*</span></label>
                                         <input type="text">
                                     </div>
-                                    <div class="col-12 mb-2">
+
+                                    <div class="col-md-6 mb-2">
                                         <label for="country">Thành phố <span>*</span></label>
                                         <select class="form-control" name="cuntry" id="country">
                                             <option value="2">Hà nội</option>
-                                            <option value="3">TP. HCM</option>
+                                            <option value="3">TP HCM</option>
                                             <option value="4">Đà nẵng</option>
                                             <option value="5">Nghệ an</option>
                                             <option value="6">Huế</option>
                                             <option value="7">Nha trang</option>
                                         </select>
+                                    </div>
+                                    
+                                    <div class="col-lg-6 mb-2">
+                                        <label>Số điện thoại<span>*</span></label>
+                                        <input type="text">
                                     </div>
 
                                     <div class="col-12 mb-2">
@@ -245,17 +251,6 @@
                                     </div>
                                     <div class="col-12 mb-2">
                                         <input placeholder="Phường, xã, ..." type="text">
-                                    </div>
-
-                                    <div class="col-lg-6 mb-2">
-                                        <label>Số điện thoại<span>*</span></label>
-                                        <input type="text">
-
-                                    </div>
-                                    <div class="col-lg-6 mb-2">
-                                        <label>Địa chỉ email <span>*</span></label>
-                                        <input type="text">
-
                                     </div>
 
                                     <div class="col-12">
@@ -274,46 +269,42 @@
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Total</th>
+                                                <th>Sản phẩm</th>
+                                                <th>Tổng cộng</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td> Handbag fringilla <strong> × 2</strong></td>
-                                                <td> $165.00</td>
+                                                <td>IPHONE 11 PRO MAX 256GB <strong> × 1</strong></td>
+                                                <td>37.990.000đ</td>
                                             </tr>
                                             <tr>
-                                                <td> Handbag justo <strong> × 2</strong></td>
-                                                <td> $50.00</td>
+                                                <td>APPLE MACBOOK PRO 13 INCH 128GB MPXQ2 CHÍNH HÃNG (2017) <strong> × 1</strong></td>
+                                                <td>27.500.000đ</td>
                                             </tr>
                                             <tr>
-                                                <td> Handbag elit <strong> × 2</strong></td>
-                                                <td> $50.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td> Handbag Rutrum <strong> × 1</strong></td>
-                                                <td> $50.00</td>
+                                                <td>REALME 3 (3GB/32GB) <strong> × 1</strong></td>
+                                                <td>3.190.000đ</td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Cart Subtotal</th>
-                                                <td>$215.00</td>
+                                                <th>Tổng tiền hàng</th>
+                                                <td>68.680.000đ</td>
                                             </tr>
                                             <tr>
                                                 <th>Shipping</th>
-                                                <td><strong>$5.00</strong></td>
+                                                <td><strong>0đ</strong></td>
                                             </tr>
                                             <tr class="order-total">
-                                                <th>Order Total</th>
-                                                <td><strong>$220.00</strong></td>
+                                                <th>Tổng số tiền</th>
+                                                <td><strong>68.680.000đ</strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>
                                 </div>
                                 <div class="payment-method">
-                                    <div class="panel-default">
+                                    <div class="panel-default pb-2 pr-3">
                                         <input id="payment" name="check-method" type="radio" data-target="createp-account">
                                         <label for="payment">Credit card</label>
                                     </div>

@@ -379,7 +379,6 @@
 .order-notes textarea {
     border: 1px solid #e5e5e5;
     border-radius: 0;
-    height: 45px;
     max-width: 100%;
     padding: 0 30px 0 20px;
     background: none;
@@ -424,6 +423,10 @@
     text-align: center;
     padding: 15px 0;
     border-bottom: 1px solid #ddd;
+}
+
+.panel-default {
+    display: inline-block;
 }
 
 /*
