@@ -22,6 +22,9 @@ require.config({
         loginJS: {
             deps: ["jquery"]
         },
+        productJS: {
+            deps: ["jquery"]
+        },
     },
 });
 
