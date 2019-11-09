@@ -6,8 +6,7 @@ require.config({
         lazyload: 'lazyload/lazyload.min',
         bootstrap: 'bootstrap/bootstrap.bundle.min',
         scrollUp: 'scrollUp/jquery.scrollUp.min',
-        loginJS: 'myjs/login',
-        productJS: 'myjs/product',
+        customJS: 'custom',
     },
     shim: {
         slick: {
@@ -19,16 +18,13 @@ require.config({
         scrollUp: {
             deps: ["jquery"]
         },
-        loginJS: {
-            deps: ["jquery"]
-        },
-        productJS: {
+        customJS: {
             deps: ["jquery"]
         },
     },
 });
 
-define(['jquery', 'bootstrap', 'loginJS', 'productJS'], function($) {
+define(['jquery', 'bootstrap', 'customJS'], function($) {
     'use strict'
 
     /*---Lazyload---*/
