@@ -217,22 +217,18 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="account-form">
                             <h2>Đăng nhập</h2>
-                            <form action="#" onsubmit="return false;">
+                            <form id="form_Login" onsubmit="return false">
                                 <div class="form-group">
                                     <div class="mb-3">
                                         <label for="login_Email">Địa chỉ email <span>*</span></label>
-                                        <input type="email" class="form-control txt_login" id="login_Email" placeholder="Vui lòng nhập email">
-                                        <div class="invalid-feedback">
-                                            Bạn chưa nhập email hoặc không đúng định dạng.
-                                        </div>
+                                        <input type="email" class="form-control txt_login" name="login_Email" id="login_Email" placeholder="Vui lòng nhập email">
+                                        <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="login_Password">Mật khẩu <span>*</span></label>
-                                        <input type="password" class="form-control txt_login" id="login_Password" placeholder="Vui lòng nhập mật khẩu">
-                                        <div class="invalid-feedback">
-                                            Bạn chưa nhập mật khẩu hoặc mật khẩu ít hơn 5 ký tự.
-                                        </div>
+                                        <input type="password" class="form-control txt_login" name="login_Password" id="login_Password" placeholder="Vui lòng nhập mật khẩu">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
                                 <div class="login-submit">
@@ -248,22 +244,18 @@
                     <div class="col-lg-6 col-md-6 pt-3 pt-md-0">
                         <div class="account-form register">
                             <h2>Đăng ký</h2>
-                            <form action="#" onsubmit="return false;">
+                            <form id="form_Register" onsubmit="return false">
                                 <div class="form-group">
                                     <div class="mb-3">
                                         <label for="register_Email">Địa chỉ email <span>*</span></label>
-                                        <input type="email" class="form-control txt_register" id="register_Email" placeholder="Vui lòng nhập email">
-                                        <div class="invalid-feedback">
-                                            Bạn chưa nhập email hoặc không đúng định dạng.
-                                        </div>
+                                        <input type="email" class="form-control txt_register" name="register_Email" id="register_Email" placeholder="Vui lòng nhập email">
+                                        <div class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="mb-3">
                                         <label for="register_Password">Mật khẩu <span>*</span></label>
-                                        <input type="password" class="form-control txt_register" id="register_Password" placeholder="Vui lòng nhập mật khẩu">
-                                        <div class="invalid-feedback">
-                                            Bạn chưa nhập mật khẩu hoặc mật khẩu ít hơn 5 ký tự.
-                                        </div>
+                                        <input type="password" class="form-control txt_register" name="register_Password" id="register_Password" placeholder="Vui lòng nhập mật khẩu">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
                                 <div class="login-submit">
@@ -387,6 +379,15 @@
     <div class="overlay"></div>
 
     <script src="js/requirejs/require.min.js" data-main="js/app.js"></script>
+    <script>
+        (function() {
+            var user = sessionStorage.getItem('user');
+            if (user === null || user === '') {
+            } else {
+                location.replace('index.html');
+            }
+        })();
+    </script>
 </body>
 
 </html>

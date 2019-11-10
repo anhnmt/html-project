@@ -319,6 +319,9 @@ img.loaded {
         visibility: visible;
         -webkit-transform: perspective(600px) rotateX(0deg);
         transform: perspective(600px) rotateX(0deg);
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
     }
     .navbar-collapse {
         position: fixed;

@@ -6,6 +6,7 @@ require.config({
         lazyload: 'lazyload/lazyload.min',
         bootstrap: 'bootstrap/bootstrap.bundle.min',
         scrollUp: 'scrollUp/jquery.scrollUp.min',
+        jqueryValidate: 'jqueryValidate/jquery.validate.min',
     },
     shim: {
         slick: {
@@ -15,6 +16,9 @@ require.config({
             deps: ["jquery"]
         },
         scrollUp: {
+            deps: ["jquery"]
+        },
+        jqueryValidate: {
             deps: ["jquery"]
         },
     },
@@ -87,79 +91,117 @@ define(['jquery', 'bootstrap'], function($) {
         if (('sessionStorage') in window) {
             var user = sessionStorage.getItem('user');
             if (user !== null && user !== '') {
-                $('.header-account').html('<a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><i class="fas fa-user"></i> <span>Xin chào: ' + user + '</span></a>');
+                $('.header-account').html('<i class="fas fa-user"></i> <span>Xin chào: ' + user + '</span> | <a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><span>Đăng xuất</span></a>');
                 $('[data-toggle="tooltip"]').tooltip();
+
+                /*---Click logout---*/
+                $('#btn_logout').click(function() {
+                    alert('Đăng xuất thành công!');
+                    if (('sessionStorage') in window) {
+                        sessionStorage.removeItem('user');
+                        location.replace('index.html');
+                    }
+                });
             }
         }
     });
 
-    /*---Click login---*/
-    $('.txt_login').bind('blur keyup', function() {
-        validate(this);
-    });
-
-    $('#btn_login').on('click', function() {
-        $('.txt_login').blur();
-
-        if (!$('.txt_login').hasClass('is-invalid')) {
-            alert('Đăng nhập thành công!');
-            if (('sessionStorage') in window) {
-                var user = $('.txt_login[type="email"]').val();
-                sessionStorage.setItem('user', user);
-                location.replace('index.html');
+    /*---jQuery Validate---*/
+    require(['jqueryValidate'], function(validate) {
+        /*---Validate login---*/
+        $("#form_Login").validate({
+            rules: {
+                login_Email: {
+                    required: true,
+                    email: true,
+                    normalizer: function(value) {
+                        return $.trim(value);
+                    }
+                },
+                login_Password: {
+                    required: true,
+                    minlength: 6,
+                    normalizer: function(value) {
+                        return $.trim(value);
+                    }
+                },
+            },
+            messages: {
+                login_Email: {
+                    required: "Nhập email của bạn",
+                    email: "Vui lòng nhập một địa chỉ email hợp lệ.",
+                },
+                login_Password: {
+                    required: "Nhập mật khẩu của bạn",
+                    minlength: "Vui lòng nhập ít nhất 6 ký tự.",
+                },
+            },
+            highlight: function(input) {
+                $(input).addClass('is-invalid');
+            },
+            unhighlight: function(input) {
+                $(input).removeClass('is-invalid');
+            },
+            errorPlacement: function(error, element) {
+                $(element).next().append(error);
+            },
+            submitHandler: function() {
+                alert('Đăng nhập thành công!');
+                if (('sessionStorage') in window) {
+                    var user = $('.txt_login[type="email"]').val();
+                    sessionStorage.setItem('user', user);
+                    location.replace('index.html');
+                }
             }
-        }
-    });
+        });
 
-    /*---Click register---*/
-    $('.txt_register').bind('blur keyup', function() {
-        validate(this);
-    });
-
-    $('#btn_register').on('click', function() {
-        $('.txt_register').blur();
-
-        if (!$('.txt_register').hasClass('is-invalid')) {
-            alert('Đăng ký thành công!');
-            if (('sessionStorage') in window) {
-                var user = $('.txt_register[type="email"]').val();
-                sessionStorage.setItem('user', user);
-                location.replace('index.html');
+        /*---Validate register---*/
+        $("#form_Register").validate({
+            rules: {
+                register_Email: {
+                    required: true,
+                    email: true,
+                    normalizer: function(value) {
+                        return $.trim(value);
+                    }
+                },
+                register_Password: {
+                    required: true,
+                    minlength: 6,
+                    normalizer: function(value) {
+                        return $.trim(value);
+                    }
+                },
+            },
+            messages: {
+                register_Email: {
+                    required: "Nhập email của bạn",
+                    email: "Vui lòng nhập một địa chỉ email hợp lệ.",
+                },
+                register_Password: {
+                    required: "Nhập mật khẩu của bạn",
+                    minlength: "Vui lòng nhập ít nhất 6 ký tự.",
+                },
+            },
+            highlight: function(input) {
+                $(input).addClass('is-invalid');
+            },
+            unhighlight: function(input) {
+                $(input).removeClass('is-invalid');
+            },
+            errorPlacement: function(error, element) {
+                $(element).next().append(error);
+            },
+            submitHandler: function() {
+                alert('Đăng ký thành công!');
+                if (('sessionStorage') in window) {
+                    var user = $('.txt_register[type="email"]').val();
+                    sessionStorage.setItem('user', user);
+                    location.replace('index.html');
+                }
             }
-        }
+        });
     });
-
-    /*---Click logout---*/
-    $('#btn_logout').on('click', function() {
-        alert('Đăng xuất thành công!');
-        if (('sessionStorage') in window) {
-            sessionStorage.removeItem('user');
-            location.replace('index.html');
-        }
-    });
-
-    function validate(arg) {
-        var el = $(arg);
-        var value = el.val().trim();
-        var id = el.attr('type');
-
-        if (value === '') {
-            el.addClass('is-invalid');
-            return false;
-        } else {
-            const email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if (id === 'email' && !email.test(value)) {
-                el.addClass('is-invalid');
-                return false;
-            } else if (id === 'password' && value.length < 5) {
-                el.addClass('is-invalid');
-                return false;
-            }
-        }
-
-        el.removeClass('is-invalid').addClass('is-valid');
-        return true;
-    }
 
     function formatNumber(num) {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
