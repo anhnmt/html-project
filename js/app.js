@@ -101,7 +101,7 @@ define(['jquery', 'bootstrap', 'customJS'], function($) {
     });
 
     /*---Click logout---*/
-    $(document).on('click', '#btn_logout', (function() {
+    $(document).on('click', '#btn_logout', function() {
         alert('Đăng xuất thành công!');
         UserManager.logoutUser();
         location.replace('index.html');
