@@ -1,44 +1,3 @@
-$(".item-product").each(function(index) {
-    var id = $(this).data('id') ? $(this).data('id') : '';
-    var name = $(this).data('name') ? $(this).data('name') : '';
-    var cat = $(this).data('cat') ? $(this).data('cat') : '';
-    var img = $(this).data('img') ? $(this).data('img') : '';
-    var price = formatNumber($(this).data('price') ? $(this).data('price') : 0);
-    var old_price = $(this).data('old-price') ? formatNumber($(this).data('old-price')) : '';
-    var quantity = $(this).data('quantity') ? $(this).data('quantity') : 1;
-    // console.log(id, name, img, price, quantity);
-    $(this).html(`
-    <div class="item-image">
-        <a href="product.html" title="${name}">
-            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="${img}" alt="${name}">
-        </a>
-
-        <div class="item-wishlist">
-            <a class="add-wishlist" data-toggle="tooltip" title="Thích sản phẩm"><i class="far fa-heart"></i></a>
-            <a class="add-cart" data-toggle="tooltip" title="Thêm vào giỏ hàng"><i class="far fa-shopping-cart"></i></a>
-        </div>
-    </div>
-
-    <div class="item-content">
-        <div class="item-title">
-            <a href="product.html" title="${name}">
-                <span class="cat">${cat}</span>
-                <h5 class="title">${name}</h5>
-            </a>
-        </div>
-        <div class="item-price">
-            <h5 class="price">
-                <span class="new">
-                    <span class="money">${price}</span>
-                </span>
-                <span class="old">
-                    <span class="money">${old_price}</span>
-                </span>
-            </h5>
-        </div>
-    </div>`);
-});
-
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') + 'đ';
 }
@@ -143,6 +102,7 @@ var WishlistManager = (function() {
         return total;
     }
 
+    objToReturn.getIndexOfWishlist = getIndexOfWishlist;
     objToReturn.getAllWishlists = getAllWishlists;
     objToReturn.updatePoduct = updatePoduct;
     objToReturn.setWishlist = setWishlist;
@@ -152,8 +112,21 @@ var WishlistManager = (function() {
     return objToReturn;
 }());
 
+$(".add-wishlist").each(function(index) {
+    var $target = $(this).closest('.item-product');
+    var id = $target.data('id');
+    var wishlistIndex = WishlistManager.getIndexOfWishlist(id);
+    if (wishlistIndex < 0) {
+        $(this).removeClass('wishlist-added');
+    } else {
+        $(this).addClass('wishlist-added');
+    }
+    // console.log(id, name, img, price, quantity);
+});
+
 $(".add-wishlist").click(function(event) {
     event.preventDefault();
+    $(this).toggleClass('wishlist-added');
     var $target = $(this).closest('.item-product');
     var id = $target.data('id');
     var name = $target.data('name');
@@ -342,18 +315,33 @@ var productTable = function() {
         $.each(products, function() {
             var total = formatNumber(this.quantity * this.price);
             $('.table-cart tbody').append(`
-                <tr data-id="${this.id}" data-price="${this.price}">
-                    <td class="product-thumb">
-                        <a href="#"><img src="${this.image}" alt="${this.name}"></a>
-                    </td>
-                    <td class="product-name"><a href="#">${this.name}</a></td>
-                    <td class="product-price">${formatNumber(this.price)}</td>
-                    <td class="product-quantity"><input min="1" max="100" value="${this.quantity}" type="number"></td>
-                    <td class="product-total">${total}</td>
-                    <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
-                </tr>`);
+            <tr data-id="${this.id}" data-price="${this.price}">
+                <td class="product-thumb">
+                    <a href="#"><img src="${this.image}" alt="${this.name}"></a>
+                </td>
+                <td class="product-name"><a href="#">${this.name}</a></td>
+                <td class="product-price">${formatNumber(this.price)}</td>
+                <td class="product-quantity"><input min="1" max="100" value="${this.quantity}" type="number"></td>
+                <td class="product-total">${total}</td>
+                <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
+            </tr>`);
         }) :
         $('.table-cart tbody').append('<tr><td colspan="6">Không có gì cả ...</td></tr>');
+}
+
+var checkoutTable = function() {
+    $('.table-checkout tbody').empty();
+    var products = ProductManager.getAllProducts();
+    products.length ?
+        $.each(products, function() {
+            var total = formatNumber(this.quantity * this.price);
+            $('.table-checkout tbody').append(`
+            <tr>
+                <td>${this.name} <strong> × ${this.quantity}</strong></td>
+                <td>${total}</td>
+            </tr>`);
+        }) :
+        $('.table-checkout tbody').append('<tr><td colspan="6">Không có gì cả ...</td></tr>');
 }
 
 $(document).on("input", ".table-cart .product-quantity input", function() {
@@ -387,16 +375,7 @@ var productTotal = function(products) {
     $(".cart-price, .cart-total").text(formatNumber(total));
 }
 
-productTotal(ProductManager.getAllProducts());
 $('.cart-quantity').text(ProductManager.getTotalQuantityOfProduct());
 productTable();
-
-
-
-
-
-// $(".add-wishlist").click(function(event) {
-//     event.preventDefault();
-//     var count = parseFloat($('.wishlist-quantity').html());
-//     $('.wishlist-quantity').html(count + 1);
-// });
+checkoutTable();
+productTotal(ProductManager.getAllProducts());
