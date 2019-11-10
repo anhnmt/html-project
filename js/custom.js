@@ -144,12 +144,12 @@ var wishlistTable = function() {
             $('.table-wishlist tbody').append(`
             <tr data-id="${this.id}" data-name="${this.name}" data-cat="${this.cat}" data-price="${this.price}", data-quantity="1", data-img="${this.image}">
                 <td class="product-thumb">
-                    <a href="#"><img src="${this.image}" alt="${this.name}"></a>
+                    <a href="javascript:;"><img src="${this.image}" alt="${this.name}"></a>
                 </td>
-                <td class="product-name"><a href="#">${this.name}</a></td>
+                <td class="product-name"><a href="javascript:;">${this.name}</a></td>
                 <td class="product-price">${formatNumber(this.price)}</td>
-                <td class="product-add"><a href="#">Thêm vào giỏ</a></td>
-                <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
+                <td class="product-add"><a href="javascript:;">Thêm vào giỏ</a></td>
+                <td class="product-remove"><a href="javascript:;"><i class="far fa-trash"></i></a></td>
             </tr>`);
         }) :
         $('.table-wishlist tbody').append('<tr><td colspan="6">Không có gì cả ...</td></tr>');
@@ -316,13 +316,13 @@ var productTable = function() {
             $('.table-cart tbody').append(`
             <tr data-id="${this.id}" data-price="${this.price}">
                 <td class="product-thumb">
-                    <a href="#"><img src="${this.image}" alt="${this.name}"></a>
+                    <a href="javascript:;"><img src="${this.image}" alt="${this.name}"></a>
                 </td>
-                <td class="product-name"><a href="#">${this.name}</a></td>
+                <td class="product-name"><a href="javascript:;">${this.name}</a></td>
                 <td class="product-price">${formatNumber(this.price)}</td>
                 <td class="product-quantity"><input min="1" max="100" value="${this.quantity}" type="number"></td>
                 <td class="product-total">${total}</td>
-                <td class="product-remove"><a href="#"><i class="far fa-trash"></i></a></td>
+                <td class="product-remove"><a href="javascript:;"><i class="far fa-trash"></i></a></td>
             </tr>`);
         }) :
         $('.table-cart tbody').append('<tr><td colspan="6">Không có gì cả ...</td></tr>');

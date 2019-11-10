@@ -96,15 +96,15 @@ define(['jquery', 'bootstrap', 'customJS'], function($) {
             if (UserManager.checkLogin()) {
                 $('.header-account').html('<i class="fas fa-user"></i> <span>Xin chào: ' + UserManager.checkLogin() + '</span> | <a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><span>Đăng xuất</span></a>');
                 $('[data-toggle="tooltip"]').tooltip();
-
-                /*---Click logout---*/
-                $('#btn_logout').click(function() {
-                    alert('Đăng xuất thành công!');
-                    UserManager.logoutUser();
-                    location.replace('index.html');
-                });
             }
         }
+    });
+
+    /*---Click logout---*/
+    $(document).on('click', '#btn_logout', (function() {
+        alert('Đăng xuất thành công!');
+        UserManager.logoutUser();
+        location.replace('index.html');
     });
 
     /*---jQuery Validate---*/
