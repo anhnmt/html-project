@@ -362,18 +362,6 @@
     <div class="overlay"></div>
 
     <script src="js/requirejs/require.min.js" data-main="js/app.js"></script>
-    <script>
-        (function() {
-            if (typeof(Storage) !== 'undefined') {
-                localStorage.users = localStorage.users ? localStorage.users : "";
-                
-                var user = localStorage.isLogin;
-                if (user === null || user === '') {
-                    location.replace('login.html');
-                }
-            }
-        })();
-    </script>
 </body>
 
 </html>
