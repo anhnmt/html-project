@@ -2,7 +2,6 @@ function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.') + 'đ';
 }
 
-
 var WishlistManager = (function() {
     var objToReturn = {};
 
@@ -121,7 +120,6 @@ $(".add-wishlist").each(function(index) {
     } else {
         $(this).addClass('wishlist-added');
     }
-    // console.log(id, name, img, price, quantity);
 });
 
 $(".add-wishlist").click(function(event) {
