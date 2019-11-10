@@ -155,7 +155,7 @@ var wishlistTable = function() {
         $('.table-wishlist tbody').append('<tr><td colspan="6">Không có gì cả ...</td></tr>');
 }
 
-$(document).on('click', ".table-wishlist tbody .product-remove a", function() {
+$(".table-wishlist tbody .product-remove a").click(function() {
     var $target = $(this).closest('tr');
     var id = $target.data("id");
     $target.hide(300, function() {
@@ -309,6 +309,7 @@ $(".product-add a").click(function(event) {
 var productTable = function() {
     $('.table-cart tbody').empty();
     var products = ProductManager.getAllProducts();
+    productTotal(products);
     products.length ?
         $.each(products, function() {
             var total = formatNumber(this.quantity * this.price);
@@ -355,7 +356,15 @@ $(document).on("input", ".table-cart .product-quantity input", function() {
     productTotal(ProductManager.getAllProducts());
 });
 
-$(document).on('click', ".table-cart tbody .product-remove a", function() {
+var productTotal = function(products) {
+    var total = 0;
+    $.each(products, function() {
+        total += this.quantity * this.price;
+    });
+    $(".cart-price, .cart-total").text(formatNumber(total));
+}
+
+$(".table-cart tbody .product-remove a").click(function() {
     var $target = $(this).closest('tr');
     var id = $target.data("id");
     $target.hide(300, function() {
@@ -365,18 +374,9 @@ $(document).on('click', ".table-cart tbody .product-remove a", function() {
     });
 });
 
-var productTotal = function(products) {
-    var total = 0;
-    $.each(products, function() {
-        total += this.quantity * this.price;
-    });
-    $(".cart-price, .cart-total").text(formatNumber(total));
-}
-
 $('.cart-quantity').text(ProductManager.getTotalQuantityOfProduct());
 productTable();
 checkoutTable();
-productTotal(ProductManager.getAllProducts());
 
 
 var UserManager = (function() {
