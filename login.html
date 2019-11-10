@@ -381,7 +381,7 @@
     <script src="js/requirejs/require.min.js" data-main="js/app.js"></script>
     <script>
         (function() {
-            var user = sessionStorage.getItem('user');
+            var user = localStorage.getItem('user');
             if (user === null || user === '') {
             } else {
                 location.replace('index.html');
