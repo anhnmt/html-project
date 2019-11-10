@@ -383,10 +383,9 @@
         (function() {
             if (typeof(Storage) !== 'undefined') {
                 localStorage.users = localStorage.users ? localStorage.users : "";
-                
+
                 var user = localStorage.isLogin;
-                if (user === null || user === '') {
-                } else {
+                if (user === null || user === '') {} else {
                     location.replace('index.html');
                 }
             }

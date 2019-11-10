@@ -93,17 +93,14 @@ define(['jquery', 'bootstrap', 'customJS'], function($) {
     /*---Check login---*/
     $(function() {
         if (typeof(Storage) !== 'undefined') {
-            localStorage.isLogin = localStorage.isLogin ? localStorage.isLogin : "";
-
-            var user = localStorage.isLogin;
-            if (user !== null && user !== '') {
-                $('.header-account').html('<i class="fas fa-user"></i> <span>Xin chào: ' + user + '</span> | <a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><span>Đăng xuất</span></a>');
+            if (UserManager.checkLogin()) {
+                $('.header-account').html('<i class="fas fa-user"></i> <span>Xin chào: ' + UserManager.checkLogin() + '</span> | <a id="btn_logout" data-toggle="tooltip" title="Đăng xuất"><span>Đăng xuất</span></a>');
                 $('[data-toggle="tooltip"]').tooltip();
 
                 /*---Click logout---*/
                 $('#btn_logout').click(function() {
                     alert('Đăng xuất thành công!');
-                    localStorage.removeItem('user');
+                    UserManager.logoutUser();
                     location.replace('index.html');
                 });
             }
@@ -151,37 +148,13 @@ define(['jquery', 'bootstrap', 'customJS'], function($) {
             },
             submitHandler: function() {
                 if (typeof(Storage) !== 'undefined') {
-                    localStorage.users = localStorage.users ? localStorage.users : "";
-
-                    var getAllUsers = function() {
-                        try {
-                            var users = JSON.parse(localStorage.users);
-                            return users;
-                        } catch (e) {
-                            return [];
-                        }
-                    }
-                    var getIndexOfUser = function(username, password) {
-                        var userIndex = -1;
-                        var users = getAllUsers();
-                        $.each(users, function(index, value) {
-                            if (value.username === username && value.password === password) {
-                                userIndex = index;
-                                return;
-                            }
-                        });
-                        return userIndex;
-                    }
-
                     var username = $('.txt_login[type="email"]').val();
                     var password = $('.txt_login[type="password"]').val();
-                    var userIndex = getIndexOfUser(username, password);
-                    if (userIndex < 0) {
-                        alert('Đăng nhập thất bại, vui lòng thử lại!');
-                    } else {
-                        localStorage.isLogin = username;
+                    if (UserManager.loginUser(username, password)) {
                         alert('Đăng nhập thành công!');
                         location.replace('index.html');
+                    } else {
+                        alert('Đăng nhập thất bại, vui lòng thử lại!');
                     }
                 }
             }
@@ -225,14 +198,11 @@ define(['jquery', 'bootstrap', 'customJS'], function($) {
                 $(element).next().append(error);
             },
             submitHandler: function() {
-                alert('Đăng ký thành công, vui lòng đăng nhập!');
                 if (typeof(Storage) !== 'undefined') {
-                    var user = [];
-                    user.push({
-                        username: $('.txt_register[type="email"]').val(),
-                        password: $('.txt_register[type="password"]').val(),
-                    });
-                    localStorage.users = JSON.stringify(user);
+                    var username = $('.txt_register[type="email"]').val();
+                    var password = $('.txt_register[type="password"]').val();
+                    UserManager.setUser(username, password);
+                    alert('Đăng ký thành công, vui lòng đăng nhập!');
                     location.reload();
                 }
             }

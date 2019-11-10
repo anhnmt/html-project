@@ -377,3 +377,91 @@ $('.cart-quantity').text(ProductManager.getTotalQuantityOfProduct());
 productTable();
 checkoutTable();
 productTotal(ProductManager.getAllProducts());
+
+
+var UserManager = (function() {
+    var objToReturn = {};
+
+    /*
+    PRIVATE
+    */
+    localStorage.users = localStorage.users ? localStorage.users : "";
+    localStorage.isLogin = localStorage.isLogin ? localStorage.isLogin : "";
+    var getIndexOfUser = function(username, password) {
+        var userIndex = -1;
+        var users = getAllUsers();
+        $.each(users, function(index, value) {
+            if (value.username === username && value.password === password) {
+                userIndex = index;
+                return;
+            }
+        });
+        return userIndex;
+    }
+    var setAllUsers = function(users) {
+        localStorage.users = JSON.stringify(users);
+    }
+    var addUser = function(username, password) {
+        var users = getAllUsers();
+        users.push({
+            username: username,
+            password: password
+        });
+        setAllUsers(users);
+    }
+
+    /*
+    PUBLIC
+    */
+    var getAllUsers = function() {
+        try {
+            var users = JSON.parse(localStorage.users);
+            return users;
+        } catch (e) {
+            return [];
+        }
+    }
+    var setUser = function(username, password) {
+        if (typeof username === "undefined") {
+            console.error("username required")
+            return false;
+        }
+        if (typeof password === "undefined") {
+            console.error("password required")
+            return false;
+        }
+
+        var userIndex = getIndexOfUser(id);
+        if (userIndex < 0) {
+            addUser(username, password);
+        }
+    }
+    var loginUser = function(username, password) {
+        var userIndex = getIndexOfUser(username, password);
+        if (userIndex < 0) {
+            return false;
+        }
+
+        localStorage.isLogin = username;
+        return true;
+    }
+    var logoutUser = function() {
+        localStorage.isLogin = "";
+    }
+    var checkLogin = function() {
+        var user = localStorage.isLogin;
+        if (user !== null || user !== '') {
+            return user;
+        }
+
+        return false;
+    }
+
+    objToReturn.getIndexOfUser = getIndexOfUser;
+    objToReturn.getAllUsers = getAllUsers;
+    objToReturn.setUser = setUser;
+    objToReturn.loginUser = loginUser;
+    objToReturn.logoutUser = logoutUser;
+    objToReturn.checkLogin = checkLogin;
+    return objToReturn;
+}());
