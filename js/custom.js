@@ -431,7 +431,7 @@ var UserManager = (function() {
             return false;
         }
 
-        var userIndex = getIndexOfUser(id);
+        var userIndex = getIndexOfUser(username, password);
         if (userIndex < 0) {
             addUser(username, password);
         }
